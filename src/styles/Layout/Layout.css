@@ -214,7 +214,7 @@
 
 .theme-switch {
   position: absolute;
-  top: 136px;
+  top: 128px;
   left: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,6 +223,7 @@
 
 @media screen and (min-width: 768px) {
   .theme-switch {
+    top: 136px;
     left: 40px;
   }
 }

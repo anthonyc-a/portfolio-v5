@@ -165,11 +165,12 @@ $extra-large: 1600px;
 
 .theme-switch {
   position: absolute;
-  top: 136px;
+  top: 128px;
   left: 16px;
   display: flex;
 
   @media screen and (min-width: $small) {
+    top: 136px;
     left: 40px;
   }
 
