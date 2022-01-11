@@ -57,7 +57,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 152.35px;
+  width: 162.5px;
   height: 10px;
   line-height: 10px;
   -webkit-transform-origin: 50% 50%;
@@ -109,14 +109,9 @@
   }
 }
 
-.header .header-content .time {
-  letter-spacing: 1px;
-}
-
 .header .header-content .time span {
   font-family: "IIVorkursMedium";
   margin-right: 4px;
-  letter-spacing: 0.5px;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -267,7 +262,22 @@
   cursor: pointer;
 }
 
+.info-contain .info-header .toggle-info::before {
+  content: "more info";
+}
+
+.info-contain .info-header .toggle-info.active::before {
+  content: "less info";
+}
+
+.info-contain .info-header .toggle-info.active svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .info-contain .info-header .toggle-info svg {
   margin-left: 8px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
 }
 /*# sourceMappingURL=Layout.css.map */

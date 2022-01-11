@@ -3,12 +3,12 @@ import Arrow from "../../Arrow"
 
 const ToggleInfo = ({ infoActive, setInfoActive }) => {
   return (
-    <div className="toggle-info"
+    <div
+      className={infoActive ? "toggle-info active" : "toggle-info"}
       onClick={() => {
         setInfoActive(!infoActive)
       }}
     >
-      more info
       <Arrow />
     </div>
   )
