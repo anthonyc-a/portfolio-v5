@@ -1,0 +1,60 @@
+@import "./Layout/Layout.css";
+
+$smaller: 480px;
+$small: 768px;
+$medium: 1024px;
+$large: 1200px;
+$extra-large: 1600px;
+
+$black: #131313;
+$charcoal: #242424;
+$darkgrey: #333333;
+$grey: #707070;
+$white: #fff;
+$offwhite: #d4d4d4;
+
+.DarkTheme {
+  --primary-colour: #{$black};
+  --font-colour: #{$white};
+  --accent-colour: #{$grey};
+  --line-colour: #{$darkgrey};
+}
+
+.LightTheme {
+  --primary-colour: #{$offwhite};
+  --font-colour: #{$charcoal};
+  --accent-colour: #{$grey};
+  --line-colour: #{$darkgrey};
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body,
+html {
+  font-family: "IIVorkursBold", Helvetica, Arial, Sans-Serif;
+  font-size: 12px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  height: 100%;
+  background-color: #131313;
+  color: #fff;
+}
+
+a {
+  color: unset;
+  text-decoration: unset;
+}

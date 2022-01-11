@@ -1,0 +1,48 @@
+@import url(/Users/anthonyanimba/Documents/projects/portfolio/personal/portfolio-v5/src/styles/Layout/Layout.css);
+.DarkTheme {
+  --primary-colour: #131313;
+  --font-colour: #fff;
+  --accent-colour: #707070;
+  --line-colour: #333333;
+}
+
+.LightTheme {
+  --primary-colour: #d4d4d4;
+  --font-colour: #242424;
+  --accent-colour: #707070;
+  --line-colour: #333333;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body,
+html {
+  font-family: "IIVorkursBold", Helvetica, Arial, Sans-Serif;
+  font-size: 12px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  height: 100%;
+  background-color: #131313;
+  color: #fff;
+}
+
+a {
+  color: unset;
+  text-decoration: unset;
+}
+/*# sourceMappingURL=Index.css.map */

@@ -1,10 +1,27 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `Anthony Animba | Freelance Designer and Developer`,
+    description: `Freelance web designer and developer based in London`,
+    author: `@anthonyanimba`,
+  },
+  plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`manrope\:200,300,400`],
+        display: "swap",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-Q01T2ZVXZ3"],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
+  ],
 }
