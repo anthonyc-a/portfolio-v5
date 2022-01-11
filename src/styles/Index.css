@@ -1,4 +1,5 @@
 @import url(/Users/anthonyanimba/Documents/projects/portfolio/personal/portfolio-v5/src/styles/Layout/Layout.css);
+@import url("https://use.typekit.net/rrc7gjs.css");
 .DarkTheme {
   --primary-colour: #131313;
   --font-colour: #fff;
@@ -19,30 +20,101 @@
   margin: 0;
   padding: 0;
   scrollbar-width: none;
+  cursor: none !important;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
 
-body,
-html {
-  font-family: "IIVorkursBold", Helvetica, Arial, Sans-Serif;
-  font-size: 12px;
-  letter-spacing: 1px;
+html,
+body {
+  height: 100%;
+  font-family: "Manrope", Helvetica, Arial, Sans-Serif;
+  font-size: .875rem;
+  font-weight: 500;
+  letter-spacing: 1.6px;
   text-transform: uppercase;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  height: 100%;
-  background-color: #131313;
+  overflow: hidden;
+  background-color: #141414;
   color: #fff;
 }
 
 a {
   color: unset;
   text-decoration: unset;
+}
+
+.cursor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  mix-blend-mode: difference;
+  background-color: transparent;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+@media (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+}
+
+.cursor .cursor-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  border-radius: 50%;
+  -webkit-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  pointer-events: none;
+  border-radius: 50%;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  mix-blend-mode: difference;
+  background-color: #fff;
+  z-index: 10000;
+}
+
+@media (pointer: coarse) {
+  .cursor-dot {
+    display: none;
+  }
 }
 /*# sourceMappingURL=Index.css.map */
