@@ -8,12 +8,16 @@ $extra-large: 1600px;
   position: relative;
   display: flex;
   width: calc(100% - 32px);
-  height: 96px;
+  height: 80px;
   margin: 0 auto;
-  border-bottom: 1px solid #242424;
+  border-bottom: 1px solid var(--line-colour);
 
   @media screen and (min-width: $small) {
     width: calc(100% - 80px);
+  }
+
+  @media screen and (min-width: $medium) {
+    height: 96px;
   }
 
   .logo {
@@ -39,7 +43,7 @@ $extra-large: 1600px;
 
       g {
         path {
-          fill: #fff;
+          fill: var(--font-colour);
           transition: fill 0.2s ease-in-out;
         }
       }
@@ -87,7 +91,7 @@ $extra-large: 1600px;
     .time {
       span {
         margin-right: 4px;
-        color: rgba(255, 255, 255, 0.5);
+        opacity: 0.5;
       }
     }
 
@@ -105,7 +109,7 @@ $extra-large: 1600px;
         right: 0;
         width: 100%;
         height: 1px;
-        background-color: #fff;
+        background-color: var(--font-colour);
         transition: 0.4s cubic-bezier(0.51, 0.92, 0.24, 1);
       }
 
@@ -128,7 +132,7 @@ $extra-large: 1600px;
       width: 104px;
       height: 100%;
       margin-left: 40px;
-      color: #fff;
+      color: var(--font-colour);
       overflow: hidden;
 
       @media screen and (min-width: $small) {
@@ -165,13 +169,16 @@ $extra-large: 1600px;
 
 .theme-switch {
   position: absolute;
-  top: 128px;
+  top: 112px;
   left: 16px;
   display: flex;
 
   @media screen and (min-width: $small) {
-    top: 136px;
     left: 40px;
+  }
+
+  @media screen and (min-width: $medium) {
+    top: 136px;
   }
 
   .switch-item {
@@ -190,11 +197,15 @@ $extra-large: 1600px;
 .nav-arrows {
   position: absolute;
   display: none;
-  top: 136px;
+  top: 112px;
   right: 40px;
 
   @media screen and (min-width: $small) {
     display: flex;
+  }
+
+  @media screen and (min-width: $medium) {
+    top: 136px;
   }
 
   .nav-arrow {
@@ -203,10 +214,18 @@ $extra-large: 1600px;
     align-items: center;
     width: 20px;
     height: 20px;
+
+    svg {
+      g {
+        path {
+          stroke: var(--font-colour);
+        }
+      }
+    }
   }
 
   .back {
-    margin-right: 51px;
+    margin-right: 48px;
     transform: rotate(-180deg);
     opacity: 0.5;
   }
@@ -214,19 +233,27 @@ $extra-large: 1600px;
 
 .info-contain {
   position: fixed;
-  overflow: auto;
   width: calc(100% - 32px);
-  top: calc(100% - 96px);
+  top: calc(100% - 80px);
   height: calc(100% - 79px);
   margin: 0 16px;
-  padding-bottom: 80px;
-  background-color: #141414;
-  border-top: 1px solid #242424;
-  transition: all 0.4s cubic-bezier(0.51, 0.92, 0.24, 1);
+  padding-bottom: 40px;
+  background-color: var(--primary-colour);
+  border-top: 1px solid var(--line-colour);
+  transition: top 0.5s cubic-bezier(0.51, 0.92, 0.24, 1), background .2s ease-in-out;
   z-index: 1000;
 
+  @media screen and (min-width: $medium) {
+    top: calc(100% - 96px);
+  }
+
   &.active {
-    top: 95px;
+    overflow: auto;
+    top: 79px;
+
+    @media screen and (min-width: $medium) {
+      top: 95px;
+    }
   }
 
   @media screen and (min-width: $small) {
@@ -235,10 +262,28 @@ $extra-large: 1600px;
   }
 
   .info-header {
+    position: relative;
     display: flex;
     align-items: center;
     width: 100%;
-    height: 96px;
+    height: 80px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $medium) {
+      height: 96px;
+    }
+
+    .scrollbar {
+      position: fixed;
+      top: 95px;
+      width: calc(100% - 80px);
+      height: 1px;
+
+      .scrollbar-inner {
+        height: 1px;
+        width: 50px;
+      }
+    }
 
     .marker {
       display: none;
@@ -254,11 +299,12 @@ $extra-large: 1600px;
       .marker-item {
         width: 1px;
         height: 12px;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: var(--font-colour);
+        opacity: .5;
 
         &.active {
           height: 18px;
-          background-color: #fff;
+          opacity: 1;
         }
       }
     }
@@ -293,6 +339,9 @@ $extra-large: 1600px;
 
         svg {
           margin-left: 8px;
+          path {
+            stroke: var(--font-colour);
+          }
         }
       }
     }
@@ -306,6 +355,14 @@ $extra-large: 1600px;
 
       &::before {
         content: "more info";
+      }
+
+      svg {
+        g {
+          path {
+            stroke: var(--font-colour);
+          }
+        }
       }
 
       &:hover {
@@ -334,8 +391,74 @@ $extra-large: 1600px;
   }
 
   .info-content {
+    display: flex;
+    flex-direction: column-reverse;
     width: 100%;
-    height: 200vh;
-    background-color: #242424;
+
+    @media screen and (min-width: $medium) {
+      flex-direction: row;
+    }
+
+    .info-img-contain {
+      width: 100%;
+
+      @media screen and (min-width: $medium) {
+        width: 50%;
+      }
+
+      img {
+        width: 100%;
+        margin-bottom: 40px;
+        border-radius: 4px;
+        // box-shadow: 0 8px 10px 0px rgba(0, 0, 0, 0.2);
+
+        @media screen and (min-width: $medium) {
+          margin-bottom: 60px;
+        }
+      }
+    }
+
+    .info-description-contain {
+      position: relative;
+      width: 100%;
+      height: fit-content;
+      margin-bottom: 40px;
+      opacity: 0;
+      transition: 0.8s ease;
+      transition-delay: 0.125s;
+
+      @media screen and (min-width: $medium) {
+        position: sticky;
+        top: 80px;
+        width: 50%;
+        margin-bottom: unset;
+        padding-left: 80px;
+      }
+
+      &.active {
+        opacity: 1;
+      }
+
+      .tag-contain {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .info-tag {
+          margin-bottom: 12px;
+          margin-right: 16px;
+          padding: 8px;
+          font-size: 10px;
+          line-height: 8px;
+          border: 1px solid #242424;
+          border-radius: 4px;
+          white-space: nowrap;
+
+          @media screen and (min-width: $medium) {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
   }
 }

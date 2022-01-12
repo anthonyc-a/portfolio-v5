@@ -1,9 +1,18 @@
 import React from "react"
 import Link from "gatsby-link"
 
-const Logo = props => {
+const Logo = ({ props, setCursorExpand }) => {
   return (
-    <Link to="/" className="logo">
+    <Link
+      to="/"
+      className="logo"
+      onMouseEnter={() => {
+        setCursorExpand(true)
+      }}
+      onMouseLeave={() => {
+        setCursorExpand(false)
+      }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 481.9 269.3"

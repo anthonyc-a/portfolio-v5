@@ -1,8 +1,17 @@
 import React from "react"
 
-const ContactBtn = () => {
+const ContactBtn = ({ setCursorExpand }) => {
   return (
-    <a className="contact-btn" href="mailto:anthonyc.animba@gmail.com">
+    <a
+      className="contact-btn"
+      href="mailto:anthonyc.animba@gmail.com"
+      onMouseEnter={() => {
+        setCursorExpand(true)
+      }}
+      onMouseLeave={() => {
+        setCursorExpand(false)
+      }}
+    >
       contact
     </a>
   )

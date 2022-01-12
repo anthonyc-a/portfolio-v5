@@ -4,14 +4,14 @@ import ContactBtn from "./ContactBtn/ContactBtn"
 import Logo from "./Logo/Logo"
 import Time from "./Time/Time"
 
-const Header = () => {
+const Header = ({ setCursorExpand }) => {
   return (
     <div className="header">
-      <Logo />
+      <Logo setCursorExpand={setCursorExpand} />
       <div className="header-content">
-          <Time />
-          <ContactBtn />
-          <Banner />
+        <Time />
+        <ContactBtn setCursorExpand={setCursorExpand} />
+        <Banner />
       </div>
     </div>
   )

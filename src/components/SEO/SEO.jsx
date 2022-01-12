@@ -1,13 +1,18 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import { ThemeStateContext } from "../context/ToggleThemeProveide"
 
 const Seo = () => {
+  const theme = React.useContext(ThemeStateContext)
+  const themeClass = theme.lightMode === false ? "dark-theme" : "light-theme"
   return (
     <Helmet>
+      <html lang="en" className={themeClass} />
       <title>Anthony Animba | Freelance Designer & Web Developer</title>
-      <description>
-        Freelance web designer and developer based in London
-      </description>
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+      />
     </Helmet>
   )
 }

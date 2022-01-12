@@ -1,17 +1,17 @@
 @import url(/Users/anthonyanimba/Documents/projects/portfolio/personal/portfolio-v5/src/styles/Layout/Layout.css);
 @import url("https://use.typekit.net/rrc7gjs.css");
-.DarkTheme {
+.dark-theme {
   --primary-colour: #131313;
   --font-colour: #fff;
-  --accent-colour: #707070;
-  --line-colour: #333333;
+  --accent-colour: #adadad;
+  --line-colour: #242424;
 }
 
-.LightTheme {
-  --primary-colour: #d4d4d4;
+.light-theme {
+  --primary-colour: #ccc;
   --font-colour: #242424;
-  --accent-colour: #707070;
-  --line-colour: #333333;
+  --accent-colour: #adadad;
+  --line-colour: #adadad;
 }
 
 * {
@@ -27,11 +27,19 @@
   display: none;
 }
 
+::-moz-selection {
+  background-color: #9900ff;
+}
+
+::selection {
+  background-color: #9900ff;
+}
+
 html,
 body {
   height: 100%;
   font-family: "Manrope", Helvetica, Arial, Sans-Serif;
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 1.6px;
   text-transform: uppercase;
@@ -39,13 +47,43 @@ body {
 
 body {
   overflow: hidden;
-  background-color: #141414;
-  color: #fff;
+  background-color: var(--primary-colour);
+  color: var(--font-colour);
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
 }
 
 a {
   color: unset;
   text-decoration: unset;
+}
+
+h2 {
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 1024px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+p {
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 32px;
+  text-transform: none;
+}
+
+@media screen and (min-width: 1024px) {
+  p {
+    margin-bottom: 60px;
+  }
 }
 
 .cursor {
@@ -93,8 +131,14 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.5);
   background-color: transparent;
   border-radius: 50%;
-  -webkit-transition: border 0.2s ease-in-out;
-  transition: border 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.cursor .cursor-inner.expand {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  border-color: #fff;
 }
 
 .cursor-dot {
