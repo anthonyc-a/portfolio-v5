@@ -1,5 +1,4 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import { projectData } from "./ProjectData"
 import LinkArrow from "../Layout/Icons/LinkArrow"
 import NavArrows from "../Layout/NavArrows/NavArrows"
@@ -16,7 +15,8 @@ const Projects = ({ setCursorExpand }) => {
           <div className="project-item" key={i} ref={projItem}>
             <div className="project-header">
               <h2 className={item.selected}>
-                {item.name} <LinkArrow />
+                {item.name}{" "}
+                <LinkArrow/>
               </h2>
               <span>{item.type}</span>
             </div>

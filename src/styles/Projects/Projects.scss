@@ -7,11 +7,21 @@ $extra-large: 1600px;
 
 .project-container {
   position: relative;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   width: 100%;
-  height: 42vh;
+  height: 32vh;
   margin-top: 24px;
+
+  @media screen and (min-width: $small) {
+    top: 50%;
+    height: 44vh;
+  }
+  
+  @media screen and (min-width: $small) {
+    top: 50%;
+    height: 44vh;
+  }
 
   @media screen and (min-height: $medium) {
     margin-top: 12px;
@@ -24,7 +34,6 @@ $extra-large: 1600px;
   @media screen and (max-height: $smaller) {
     margin-top: 56px;
   }
-  
 
   .project-carousel {
     display: flex;
@@ -57,19 +66,20 @@ $extra-large: 1600px;
           margin-bottom: unset;
           font-size: 2.6vh;
           transform: translateY(100%);
-          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 1s
+          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s
             forwards;
 
-            svg {
-              width: 15px;
-              height: 100%;
-              margin-left: 4px;
+          svg {
+            width: 15px;
+            height: 100%;
+            margin-left: 4px;
+            transition: .2s ease-in-out;
 
-              path {
-                stroke: var(--font-colour);
-                stroke-width: .5px;
-              }
+            path {
+              stroke: var(--font-colour);
+              stroke-width: 0.5px;
             }
+          }
         }
         .selected {
           &::before {
@@ -84,9 +94,9 @@ $extra-large: 1600px;
         }
         span {
           font-weight: 300;
-          opacity: 0.5;
+          opacity: .5;
           transform: translateY(100%);
-          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 1s
+          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s
             forwards;
         }
 
@@ -106,7 +116,7 @@ $extra-large: 1600px;
         margin-top: 20px;
         width: 0;
         height: calc(100% - 74px);
-        animation: intro-anim 1s cubic-bezier(0.51, 0.92, 0.24, 1) 0.5s forwards;
+        animation: intro-anim 1s cubic-bezier(0.51, 0.92, 0.24, 1) 2.1s forwards;
         overflow: hidden;
 
         @media screen and (min-height: $proj-header-break) {
@@ -132,7 +142,7 @@ $extra-large: 1600px;
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: rgba(0, 0, 0, 0.6);
+          background-color: rgba(0, 0, 0, 0.5);
           color: #fff;
           border-radius: 4px;
           opacity: 0;
@@ -150,7 +160,6 @@ $extra-large: 1600px;
         img {
           height: 100%;
           border-radius: 4px;
-          box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
           z-index: -1;
         }
       }
@@ -161,10 +170,14 @@ $extra-large: 1600px;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      bottom: -76px;
+      bottom: -68px;
       width: calc(100vw - 32px);
-      height: 56px;
+      height: 52px;
       border-top: 1px solid var(--line-colour);
+
+      @media screen and (min-width: $small) {
+        display: none;
+      }
 
       .marker {
         display: flex;
@@ -172,7 +185,7 @@ $extra-large: 1600px;
         align-items: flex-end;
         width: 31px;
         height: 18px;
-  
+
         .marker-item {
           width: 1px;
           height: 12px;
@@ -180,11 +193,11 @@ $extra-large: 1600px;
           background-color: var(--font-colour);
           opacity: 0.5;
           transition: 0.2s ease-in-out;
-  
+
           &:nth-last-child(1) {
             margin-right: 0;
           }
-  
+
           &.active {
             height: 18px;
             opacity: 1;
@@ -202,22 +215,25 @@ $extra-large: 1600px;
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: unset;
+          padding: 4px 10px;
           transition: 0.2s ease-in-out;
-      
+          transform: translateY(4px);
+
           svg {
+            width: 10px;
+            height: 18px;
             g {
               path {
                 stroke: var(--font-colour);
               }
             }
           }
-      
+
           &:nth-child(1) {
-            margin-right: 60px;
-            transform: rotate(-180deg);
+            margin-right: 32px;
+            transform: translateY(4px) rotate(-180deg);
           }
-      
+
           &.inactive {
             pointer-events: none;
             opacity: 0.5;

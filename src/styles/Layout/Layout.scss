@@ -11,6 +11,7 @@ $extra-large: 1600px;
   height: 80px;
   margin: 0 auto;
   border-bottom: 1px solid var(--line-colour);
+  transition: border-color 0.2s ease-in-out;
 
   @media screen and (min-width: $small) {
     width: calc(100% - 80px);
@@ -115,6 +116,10 @@ $extra-large: 1600px;
         height: 1px;
         background-color: var(--font-colour);
         transition: 0.4s cubic-bezier(0.51, 0.92, 0.24, 1);
+
+        @media (pointer: coarse) {
+          display: none;
+        }
       }
 
       &:hover {
@@ -258,7 +263,7 @@ $extra-large: 1600px;
   width: 100%;
   top: calc(100% - 80px);
   height: calc(100% - 79px);
-  padding: 0 16px 40px 16px;
+  padding: 0 16px 20px 16px;
   background-color: var(--primary-colour);
   transition: top 0.5s cubic-bezier(0.51, 0.92, 0.24, 1),
     background 0.2s ease-in-out;
@@ -266,6 +271,7 @@ $extra-large: 1600px;
 
   @media screen and (min-width: $medium) {
     top: calc(100% - 96px);
+    padding: 0 16px 40px 16px;
   }
 
   @media screen and (max-height: $small) {
@@ -297,6 +303,7 @@ $extra-large: 1600px;
     height: 80px;
     margin-bottom: 40px;
     border-top: 1px solid var(--line-colour);
+    transition: border-color 0.2s ease-in-out;
 
     @media screen and (min-width: $medium) {
       height: 96px;
@@ -380,7 +387,7 @@ $extra-large: 1600px;
         }
 
         svg {
-          opacity: .5;
+          opacity: 0.5;
           margin-left: 8px;
           path {
             stroke: var(--font-colour);
@@ -450,6 +457,7 @@ $extra-large: 1600px;
       }
 
       svg {
+        animation: arrow-anim 1.2s ease-in-out infinite;
         g {
           path {
             stroke: var(--font-colour);
@@ -457,10 +465,26 @@ $extra-large: 1600px;
         }
       }
 
+      @keyframes arrow-anim {
+        0% {
+          transform: translateY(2px);
+        }
+        50% {
+          transform: translateY(-2px);
+        }
+        100% {
+          transform: translateY(2px);
+        }
+      }
+
       &:hover {
         svg {
           path {
             stroke-opacity: 1;
+
+            @media (pointer: coarse) {
+              stroke-opacity: unset;
+            }
           }
         }
       }
@@ -472,6 +496,7 @@ $extra-large: 1600px;
 
         svg {
           transform: rotate(180deg);
+          animation: unset;
         }
       }
 
