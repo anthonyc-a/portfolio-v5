@@ -1,33 +1,30 @@
 import React from "react"
-import Scrollbar from "./Scrollbar/Scrollbar"
 import Marker from "./Marker/Marker"
 import OpenSite from "./OpenSite/OpenSite"
 import TagContainer from "./Tag/TagContainer"
 import ToggleInfo from "./ToggleInfo/ToggleInfo"
-import img1 from "../../../img/arch.png"
-import img2 from "../../../img/arch1.png"
-import img3 from "../../../img/arch2.png"
+import { projectData } from "../../Projects/ProjectData"
+import { CountStateContext } from "../../context/GlobalCountProvider"
 
 const Info = ({ infoActive, setInfoActive, setCursorExpand }) => {
-  const refHeight = React.useRef()
+  const count = React.useContext(CountStateContext)
 
   return (
     <div className={infoActive ? "info-contain active" : "info-contain"}>
       <div className="info-header">
-        <Scrollbar ref={refHeight} />
         <Marker />
-        <OpenSite setCursorExpand={setCursorExpand} />
+        <OpenSite setCursorExpand={setCursorExpand} count={count} />
         <ToggleInfo
           infoActive={infoActive}
           setInfoActive={setInfoActive}
           setCursorExpand={setCursorExpand}
         />
       </div>
-      <div className="info-content" refHeight={refHeight}>
+      <div className="info-content">
         <div className="info-img-contain">
-          <img src={img1} alt="" />
-          <img src={img2} alt="" />
-          <img src={img3} alt="" />
+          <img src={projectData[count.count].img} alt="" />
+          {projectData[count.count].img1 && <img src={projectData[count.count].img1} alt="" />}
+          {projectData[count.count].img2 && <img src={projectData[count.count].img2} alt="" />}
         </div>
         <div
           className={
@@ -36,18 +33,14 @@ const Info = ({ infoActive, setInfoActive, setCursorExpand }) => {
               : "info-description-contain"
           }
         >
-          <h2>Archvizual</h2>
+          <h2>{projectData[count.count].name}</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            dolores mollitia architecto aliquid praesentium sunt veritatis
-            labore, eos quidem incidunt quos? Error repellendus nemo asperiores.
+            {projectData[count.count].description_intro}
             <br />
             <br />
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Exercitationem eaque voluptatibus id est facere. Delectus alias
-            ducimus tempora maiores deserunt.
+            {projectData[count.count].description}
           </p>
-          <TagContainer />
+          <TagContainer tags={projectData[count.count].tags} />
         </div>
       </div>
     </div>

@@ -12,9 +12,9 @@ const LinkArrow = () => {
       <path
         d="M2.08008 1H7.99997V6.91963"
         stroke="white"
-        stroke-opacity="0.5"
+        strokeOpacity="1"
       />
-      <path d="M7.99962 1L1 8.00001" stroke="white" stroke-opacity="0.5" />
+      <path d="M7.99962 1L1 8.00001" stroke="white" strokeOpacity="1" />
     </svg>
   )
 }

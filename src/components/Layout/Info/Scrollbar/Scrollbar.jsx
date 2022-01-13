@@ -16,7 +16,7 @@ const Scrollbar = ({ refHeight }) => {
   React.useEffect(() => {
     window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onscroll)
-  }, [])
+  })
 
   return (
     <div className="scrollbar">

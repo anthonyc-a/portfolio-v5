@@ -14,6 +14,11 @@ const ToggleInfo = ({ infoActive, setInfoActive, setCursorExpand }) => {
       onClick={() => {
         setInfoActive(!infoActive)
       }}
+      onKeyDown={() => {
+        setInfoActive(!infoActive)
+      }}
+      role={"button"}
+      tabIndex={0}
     >
       <Arrow />
     </div>

@@ -1,5 +1,6 @@
-@import "./Layout/Layout.css";
 @import url("https://use.typekit.net/rrc7gjs.css");
+@import "./Layout/Layout.css";
+@import "./Projects/Projects.css";
 
 $smaller: 480px;
 $small: 768px;
@@ -23,7 +24,7 @@ $offwhite: #ccc;
 
 .light-theme {
   --primary-colour: #{$offwhite};
-  --font-colour: #{$charcoal};
+  --font-colour: #{$black};
   --accent-colour: #{$grey};
   --line-colour: #{$grey};
 }
@@ -33,6 +34,7 @@ $offwhite: #ccc;
   margin: 0;
   padding: 0;
   scrollbar-width: none;
+  outline: none;
   cursor: none !important;
 }
 
@@ -41,12 +43,11 @@ $offwhite: #ccc;
 }
 
 ::-moz-selection {
-  background-color: rgb(153, 0, 255);
+  background-color: transparent;
 }
 
 ::selection {
-  background-color: rgb(153, 0, 255);
-
+  background-color: transparent;
 }
 
 html,
@@ -63,7 +64,12 @@ body {
   overflow: hidden;
   background-color: var(--primary-colour);
   color: var(--font-colour);
-  transition: background .2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 192px);
 }
 
 a {
@@ -87,11 +93,12 @@ p {
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 1px;
-  line-height: 32px;
+  line-height: 30px;
   text-transform: none;
 
   @media screen and (min-width: $medium) {
     margin-bottom: 60px;
+    line-height: 32px;
   }
 }
 

@@ -11,7 +11,9 @@ const ThemeSwitch = ({ setCursorExpand }) => {
   return (
     <div className="theme-switch">
       <div
-        className="switch-item"
+        className={
+          theme.lightMode === false ? "switch-item active" : "switch-item"
+        }
         onMouseEnter={() => {
           setCursorExpand(true)
         }}
@@ -24,11 +26,15 @@ const ThemeSwitch = ({ setCursorExpand }) => {
         onKeyDown={() => {
           toggleTheme({ type: "DARK_THEME" })
         }}
+        role={"button"}
+        tabIndex={0}
       >
         dark
       </div>
       <div
-        className="switch-item"
+        className={
+          theme.lightMode === false ? "switch-item" : "switch-item active"
+        }
         onMouseEnter={() => {
           setCursorExpand(true)
         }}
@@ -41,6 +47,8 @@ const ThemeSwitch = ({ setCursorExpand }) => {
         onKeyDown={() => {
           toggleTheme({ type: "LIGHT_THEME" })
         }}
+        role={"button"}
+        tabIndex={0}
       >
         light
       </div>

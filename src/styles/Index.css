@@ -1,5 +1,6 @@
-@import url(/Users/anthonyanimba/Documents/projects/portfolio/personal/portfolio-v5/src/styles/Layout/Layout.css);
 @import url("https://use.typekit.net/rrc7gjs.css");
+@import url(/Users/anthonyanimba/Documents/projects/portfolio/personal/portfolio-v5/src/styles/Layout/Layout.css);
+@import url(/Users/anthonyanimba/Documents/projects/portfolio/personal/portfolio-v5/src/styles/Projects/Projects.css);
 .dark-theme {
   --primary-colour: #131313;
   --font-colour: #fff;
@@ -9,7 +10,7 @@
 
 .light-theme {
   --primary-colour: #ccc;
-  --font-colour: #242424;
+  --font-colour: #131313;
   --accent-colour: #adadad;
   --line-colour: #adadad;
 }
@@ -20,6 +21,7 @@
   margin: 0;
   padding: 0;
   scrollbar-width: none;
+  outline: none;
   cursor: none !important;
 }
 
@@ -28,11 +30,11 @@
 }
 
 ::-moz-selection {
-  background-color: #9900ff;
+  background-color: transparent;
 }
 
 ::selection {
-  background-color: #9900ff;
+  background-color: transparent;
 }
 
 html,
@@ -49,8 +51,13 @@ body {
   overflow: hidden;
   background-color: var(--primary-colour);
   color: var(--font-colour);
-  -webkit-transition: background .2s ease-in-out;
-  transition: background .2s ease-in-out;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 192px);
 }
 
 a {
@@ -76,13 +83,14 @@ p {
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 1px;
-  line-height: 32px;
+  line-height: 30px;
   text-transform: none;
 }
 
 @media screen and (min-width: 1024px) {
   p {
     margin-bottom: 60px;
+    line-height: 32px;
   }
 }
 

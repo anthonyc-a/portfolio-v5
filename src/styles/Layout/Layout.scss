@@ -20,6 +20,10 @@ $extra-large: 1600px;
     height: 96px;
   }
 
+  @media screen and (max-height: $small) {
+    height: 80px;
+  }
+
   .logo {
     position: relative;
     display: flex;
@@ -181,15 +185,25 @@ $extra-large: 1600px;
     top: 136px;
   }
 
+  @media screen and (max-height: $small) {
+    top: 112px;
+  }
+
   .switch-item {
     margin-right: 20px;
+    opacity: 0.5;
 
     @media screen and (min-width: $smaller) {
       margin-right: 24px;
     }
 
-    &:nth-last-child(1) {
-      opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+
+    &.active {
+      opacity: 1;
+      pointer-events: none;
     }
   }
 }
@@ -198,22 +212,26 @@ $extra-large: 1600px;
   position: absolute;
   display: none;
   top: 112px;
-  right: 40px;
+  right: 20px;
 
   @media screen and (min-width: $small) {
     display: flex;
   }
 
   @media screen and (min-width: $medium) {
-    top: 136px;
+    top: 126px;
+  }
+
+  @media screen and (max-height: $small) {
+    top: 102px;
   }
 
   .nav-arrow {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
+    padding: 10px 20px;
+    transition: 0.2s ease-in-out;
 
     svg {
       g {
@@ -222,29 +240,36 @@ $extra-large: 1600px;
         }
       }
     }
-  }
 
-  .back {
-    margin-right: 48px;
-    transform: rotate(-180deg);
-    opacity: 0.5;
+    &:nth-child(1) {
+      margin-right: 20px;
+      transform: rotate(-180deg);
+    }
+
+    &.inactive {
+      pointer-events: none;
+      opacity: 0.5;
+    }
   }
 }
 
 .info-contain {
   position: fixed;
-  width: calc(100% - 32px);
+  width: 100%;
   top: calc(100% - 80px);
   height: calc(100% - 79px);
-  margin: 0 16px;
-  padding-bottom: 40px;
+  padding: 0 16px 40px 16px;
   background-color: var(--primary-colour);
-  border-top: 1px solid var(--line-colour);
-  transition: top 0.5s cubic-bezier(0.51, 0.92, 0.24, 1), background .2s ease-in-out;
+  transition: top 0.5s cubic-bezier(0.51, 0.92, 0.24, 1),
+    background 0.2s ease-in-out;
   z-index: 1000;
 
   @media screen and (min-width: $medium) {
     top: calc(100% - 96px);
+  }
+
+  @media screen and (max-height: $small) {
+    top: calc(100% - 80px);
   }
 
   &.active {
@@ -254,11 +279,14 @@ $extra-large: 1600px;
     @media screen and (min-width: $medium) {
       top: 95px;
     }
+
+    @media screen and (max-height: $small) {
+      top: 79px;
+    }
   }
 
   @media screen and (min-width: $small) {
-    width: calc(100% - 80px);
-    margin: 0 40px;
+    padding: 0 40px 40px 40px;
   }
 
   .info-header {
@@ -268,9 +296,14 @@ $extra-large: 1600px;
     width: 100%;
     height: 80px;
     margin-bottom: 40px;
+    border-top: 1px solid var(--line-colour);
 
     @media screen and (min-width: $medium) {
       height: 96px;
+    }
+
+    @media screen and (max-height: $small) {
+      height: 80px;
     }
 
     .scrollbar {
@@ -289,7 +322,7 @@ $extra-large: 1600px;
       display: none;
       justify-content: space-between;
       align-items: flex-end;
-      width: 31px;
+      height: 18px;
       margin-bottom: 5px;
 
       @media screen and (min-width: $small) {
@@ -299,8 +332,14 @@ $extra-large: 1600px;
       .marker-item {
         width: 1px;
         height: 12px;
+        margin-right: 6px;
         background-color: var(--font-colour);
-        opacity: .5;
+        opacity: 0.5;
+        transition: 0.2s ease-in-out;
+
+        &:nth-last-child(1) {
+          margin-right: 0;
+        }
 
         &.active {
           height: 18px;
@@ -318,6 +357,8 @@ $extra-large: 1600px;
         display: none;
         margin: 0 40px;
         pointer-events: none;
+        animation: project-switch-anim 0.4s cubic-bezier(0.51, 0.92, 0.24, 1)
+          forwards;
 
         @media screen and (min-width: $small) {
           display: block;
@@ -325,6 +366,7 @@ $extra-large: 1600px;
       }
 
       .open-btn {
+        position: relative;
         display: flex;
         align-items: center;
         height: 100%;
@@ -338,10 +380,60 @@ $extra-large: 1600px;
         }
 
         svg {
+          opacity: .5;
           margin-left: 8px;
           path {
             stroke: var(--font-colour);
           }
+        }
+
+        .open-contain {
+          display: flex;
+          overflow: hidden;
+
+          .open-txt {
+            display: flex;
+            align-items: center;
+            animation: project-switch-anim 0.4s
+              cubic-bezier(0.51, 0.92, 0.24, 1) forwards;
+          }
+        }
+      }
+
+      .dev-btn {
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+          content: "in development";
+          position: relative;
+          display: block;
+          animation: project-switch-anim-1 0.4s
+            cubic-bezier(0.51, 0.92, 0.24, 1) forwards;
+        }
+      }
+
+      @keyframes project-switch-anim {
+        from {
+          opacity: 0;
+          transform: translateY(100%);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes project-switch-anim-1 {
+        from {
+          opacity: 0;
+          transform: translateY(100%);
+        }
+
+        to {
+          opacity: 0.5;
+          transform: translateY(0);
         }
       }
     }
@@ -450,7 +542,7 @@ $extra-large: 1600px;
           padding: 8px;
           font-size: 10px;
           line-height: 8px;
-          border: 1px solid #242424;
+          border: 1px solid var(--line-colour);
           border-radius: 4px;
           white-space: nowrap;
 

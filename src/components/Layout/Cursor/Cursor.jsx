@@ -3,18 +3,6 @@ import React from "react"
 const Cursor = ({ cursorExpand }) => {
   const cursorRef = React.useRef(null)
 
-  const cursorFunction = () =>
-    document.addEventListener("mousemove", event => {
-      setInterval(() => {
-        const { clientX, clientY } = event
-        const mouseX = clientX - cursorRef.current.clientWidth / 2
-        const mouseY = clientY - cursorRef.current.clientHeight / 2
-        cursorRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0 )`
-      }, 1000 / 60)
-    })
-
-  //
-
   React.useEffect(() => {
     var mouseX = window.innerWidth / 2,
       mouseY = window.innerHeight / 2
@@ -48,7 +36,7 @@ const Cursor = ({ cursorExpand }) => {
     function lerp(start, end, amt) {
       return (1 - amt) * start + amt * end
     }
-  }, [])
+  }, [cursorRef])
 
   return (
     <div className="cursor" ref={cursorRef}>

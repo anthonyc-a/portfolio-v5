@@ -15,7 +15,7 @@ const CursorDot = () => {
   React.useEffect(() => {
     cursorRef.current.style.opacity = 0
     window.onload = cursorFunction()
-  }, [])
+  }, [cursorRef])
 
   return <div className="cursor-dot" ref={cursorRef}></div>
 }

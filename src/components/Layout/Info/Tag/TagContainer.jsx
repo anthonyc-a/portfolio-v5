@@ -1,12 +1,12 @@
 import React from "react"
 import Tag from "./Tag"
 
-const TagContainer = () => {
+const TagContainer = ({ tags }) => {
   return (
     <div className="tag-contain">
-      <Tag name={"graphic design"} />
-      <Tag name={"web design"} />
-      <Tag name={"development"} />
+      {tags.map((tag, i) => (
+        <Tag name={tag} />
+      ))}
     </div>
   )
 }

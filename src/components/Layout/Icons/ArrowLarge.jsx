@@ -9,13 +9,13 @@ const ArrowLarge = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_98_212)">
+      <g clipPath="url(#clip0_98_212)">
         <path
           d="M1.28534 0.476318L10.8091 10.0001L1.28534 19.5238"
           stroke="white"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeMiterlimit="10"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>

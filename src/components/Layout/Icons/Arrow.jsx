@@ -9,14 +9,14 @@ const Arrow = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_98_230)">
+      <g clipPath="url(#clip0_98_230)">
         <path
           d="M0.19043 3.99995L3.99995 0.19043L7.80948 3.99995"
           stroke="white"
-          stroke-opacity="0.5"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeOpacity="0.5"
+          strokeMiterlimit="10"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>
