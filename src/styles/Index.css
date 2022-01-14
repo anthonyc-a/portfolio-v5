@@ -1289,7 +1289,13 @@ body {
 
 main {
   width: 100%;
-  height: calc(100vh - 192px);
+  height: calc(100vh - 160px);
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    height: calc(100vh - 192px);
+  }
 }
 
 a {
