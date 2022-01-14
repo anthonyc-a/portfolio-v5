@@ -1056,6 +1056,12 @@
   }
 }
 
+@media screen and (min-width: 820px) {
+  .mobile-project-container {
+    display: none;
+  }
+}
+
 .mobile-project-container .project-carousel {
   display: -webkit-box;
   display: -ms-flexbox;
