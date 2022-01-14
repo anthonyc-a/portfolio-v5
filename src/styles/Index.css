@@ -747,6 +747,12 @@
   }
 }
 
+@media screen and (min-width: 1600px) {
+  .info-contain .info-content .info-description-contain {
+    top: 120px;
+  }
+}
+
 .info-contain .info-content .info-description-contain.active {
   opacity: 1;
 }
@@ -932,7 +938,7 @@
 
 .project-container .project-carousel .project-item .project-header h2 svg path {
   stroke: var(--accent-colour);
-  stroke-width: 0.5px;
+  stroke-width: 0.6px;
   -webkit-transition: stroke .2s ease-in-out;
   transition: stroke .2s ease-in-out;
 }
@@ -1297,15 +1303,15 @@
 .dark-theme {
   --primary-colour: #131313;
   --font-colour: #fff;
-  --accent-colour: #5e5e5e;
+  --accent-colour: #646464;
   --line-colour: #242424;
 }
 
 .light-theme {
   --primary-colour: #ccc;
   --font-colour: #131313;
-  --accent-colour: #5e5e5e;
-  --line-colour: #5e5e5e;
+  --accent-colour: #646464;
+  --line-colour: #646464;
 }
 
 * {

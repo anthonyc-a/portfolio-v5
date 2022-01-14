@@ -116,7 +116,7 @@
 
 .project-container .project-carousel .project-item .project-header h2 svg path {
   stroke: var(--accent-colour);
-  stroke-width: 0.5px;
+  stroke-width: 0.6px;
   -webkit-transition: stroke .2s ease-in-out;
   transition: stroke .2s ease-in-out;
 }

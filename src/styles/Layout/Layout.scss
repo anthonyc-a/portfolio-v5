@@ -557,6 +557,10 @@ $extra-large: 1600px;
         padding-left: 80px;
       }
 
+      @media screen and (min-width: $extra-large) {
+        top: 120px;
+      }
+
       &.active {
         opacity: 1;
       }
