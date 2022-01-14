@@ -256,7 +256,7 @@
 
 .mobile-project-container {
   position: relative;
-  top: 45%;
+  top: calc(33% + 86px);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 100%;
@@ -265,12 +265,6 @@
   height: fit-content;
   padding: 0 16px;
   overflow: hidden;
-}
-
-@media screen and (max-height: 720px) {
-  .mobile-project-container {
-    top: 50%;
-  }
 }
 
 @media screen and (min-width: 820px) {
