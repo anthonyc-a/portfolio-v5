@@ -818,8 +818,8 @@
   width: fit-content;
   height: 100%;
   margin-left: 40px;
-  -webkit-transition: 0.6s 0.5s cubic-bezier(0.51, 0.92, 0.24, 1);
-  transition: 0.6s 0.5s cubic-bezier(0.51, 0.92, 0.24, 1);
+  -webkit-transition: 0.6s cubic-bezier(0.51, 0.92, 0.24, 1);
+  transition: 0.6s cubic-bezier(0.51, 0.92, 0.24, 1);
 }
 
 .project-container .project-carousel .project-item {
@@ -861,10 +861,6 @@
           transform: translateY(100%);
   -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s forwards;
           animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s forwards;
-}
-
-.project-container .project-carousel .project-item .project-header h2.active {
-  color: red;
 }
 
 .project-container .project-carousel .project-item .project-header h2 svg {

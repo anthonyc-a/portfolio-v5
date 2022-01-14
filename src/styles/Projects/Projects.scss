@@ -43,7 +43,7 @@ $extra-large: 1600px;
     width: fit-content;
     height: 100%;
     margin-left: 40px;
-    transition: .6s .5s cubic-bezier(0.51, 0.92, 0.24, 1);
+    transition: .6s cubic-bezier(0.51, 0.92, 0.24, 1);
 
     .project-item {
       position: relative;
@@ -68,10 +68,6 @@ $extra-large: 1600px;
           transform: translateY(100%);
           animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s
             forwards;
-
-            &.active {
-              color: red;
-            }
 
           svg {
             width: 15px;
