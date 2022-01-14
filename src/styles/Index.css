@@ -1327,8 +1327,8 @@ p {
   max-height: -moz-available;
   max-height: stretch;
   background-color: #131313;
-  -webkit-animation: loader-anim .2s ease-out 1.5s forwards;
-          animation: loader-anim .2s ease-out 1.5s forwards;
+  -webkit-animation: loader-anim .4s ease-out 1.5s forwards;
+          animation: loader-anim .4s ease-out 1.5s forwards;
   z-index: 1000000;
 }
 
