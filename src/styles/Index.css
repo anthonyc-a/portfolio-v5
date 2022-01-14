@@ -923,8 +923,8 @@
   margin-top: 20px;
   width: 0;
   height: calc(100% - 74px);
-  -webkit-animation: intro-anim 1.2s cubic-bezier(0.51, 0.92, 0.24, 1) 1.9s forwards;
-          animation: intro-anim 1.2s cubic-bezier(0.51, 0.92, 0.24, 1) 1.9s forwards;
+  -webkit-animation: intro-anim 1s cubic-bezier(0.51, 0.92, 0.24, 1) 1.9s forwards;
+          animation: intro-anim 1s cubic-bezier(0.51, 0.92, 0.24, 1) 1.9s forwards;
   overflow: hidden;
 }
 
