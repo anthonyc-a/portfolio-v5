@@ -396,10 +396,13 @@ $extra-large: 1600px;
         }
 
         svg {
+          width: 10px;
+          height: 10px;
           opacity: 0.5;
           margin-left: 8px;
           path {
             stroke: var(--font-colour);
+            stroke-width: 1;
             stroke-opacity: 0.5;
           }
         }
