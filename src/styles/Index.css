@@ -1020,7 +1020,7 @@
   overflow: hidden;
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 720px) {
   .mobile-project-container {
     top: 50%;
   }
