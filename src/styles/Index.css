@@ -1009,7 +1009,7 @@
 
 .mobile-project-container {
   position: relative;
-  top: 45%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 100%;
@@ -1020,9 +1020,9 @@
   overflow: hidden;
 }
 
-@media screen and (max-height: 760px) {
+@media screen and (min-height: 760px) {
   .mobile-project-container {
-    top: 50%;
+    top: 45%;
   }
 }
 

@@ -186,15 +186,15 @@ $extra-large: 1600px;
 
 .mobile-project-container {
   position: relative;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
   width: 100%;
   height: fit-content;
   padding: 0 16px;
   overflow: hidden;
 
-  @media screen and (max-height: 760px) {
-    top: 50%;
+  @media screen and (min-height: 760px) {
+    top: 45%;
   }
 
   @media screen and (min-width: $proj-header-break) {
