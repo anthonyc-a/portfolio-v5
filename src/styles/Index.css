@@ -776,7 +776,7 @@
   overflow: hidden;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 820px) {
   .project-container {
     display: block;
     top: 50%;
@@ -1026,7 +1026,7 @@
   }
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 820px) {
   .mobile-project-container {
     display: none;
   }
@@ -1154,7 +1154,7 @@
   border-top: 1px solid var(--line-colour);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 820px) {
   .mobile-project-container .project-nav {
     display: none;
   }

@@ -15,7 +15,7 @@ $extra-large: 1600px;
   margin-top: 24px;
   overflow: hidden;
 
-  @media screen and (min-width: $proj-header-break) {
+  @media screen and (min-width: 820px) {
     display: block;
     top: 50%;
     height: 44vh;
@@ -197,7 +197,7 @@ $extra-large: 1600px;
     top: 45%;
   }
 
-  @media screen and (min-width: $proj-header-break) {
+  @media screen and (min-width: 820px) {
     display: none;
   }
 
@@ -300,7 +300,7 @@ $extra-large: 1600px;
     margin-top: 20px;
     border-top: 1px solid var(--line-colour);
 
-    @media screen and (min-width: $small) {
+    @media screen and (min-width: 820px) {
       display: none;
     }
 
