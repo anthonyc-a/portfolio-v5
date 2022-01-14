@@ -7,13 +7,24 @@ const Projects = ({ setCursorExpand }) => {
   const count = React.useContext(CountStateContext)
   const [selected, setSelected] = React.useState(null)
 
+
+  const toggle = i => {
+    if (selected === i) {
+      return setSelected(null)
+    }
+    setSelected(i)
+  }
+
   return (
     <section className="project-container">
-      <div className="project-carousel" style={{
+      <div
+        className="project-carousel"
+        style={{
           transform: `translate(-${
             (100 / projectData.length) * count.count
           }%, 0)`,
-        }}>
+        }}
+      >
         {projectData.map((item, i) => (
           <div className="project-item" key={i}>
             <div className="project-header">
