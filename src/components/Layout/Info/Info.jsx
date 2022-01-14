@@ -5,6 +5,7 @@ import TagContainer from "./Tag/TagContainer"
 import ToggleInfo from "./ToggleInfo/ToggleInfo"
 import { projectData } from "../../Projects/ProjectData"
 import { CountStateContext } from "../../context/GlobalCountProvider"
+import OutLinks from "./OutLinks/OutLinks"
 
 const Info = ({ infoActive, setInfoActive, setCursorExpand }) => {
   const count = React.useContext(CountStateContext)
@@ -41,6 +42,7 @@ const Info = ({ infoActive, setInfoActive, setCursorExpand }) => {
             {projectData[count.count].description}
           </p>
           <TagContainer tags={projectData[count.count].tags} />
+          <OutLinks setCursorExpand={setCursorExpand} count={count} />
         </div>
       </div>
     </div>

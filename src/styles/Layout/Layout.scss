@@ -572,6 +572,28 @@ $extra-large: 1600px;
           }
         }
       }
+
+      .out-link-contain {
+        display: flex;
+        margin-top: 40px;
+
+        .out-link-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 32px;
+          height: 32px;
+
+          &:nth-child(1) {
+            margin-right: 20px;
+          }
+
+          &.inactive {
+            opacity: .25;
+            pointer-events: none;
+          }
+        }
+      }
     }
   }
 }

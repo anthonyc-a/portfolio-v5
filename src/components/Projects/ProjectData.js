@@ -22,6 +22,9 @@ export const projectData = [
     description: `Doloremque dolores mollitia architecto aliquid praesentium sunt veritatis labore,
       eos quidem incidunt quos? Error repellendus nemo asperiores.`,
     tags: ["graphic design", "web design", "development"],
+    github: true,
+    github_link: "https://github.com/anthonyc-a/roman-vlasov-arch",
+    behance: true,
   },
   {
     name: "Pak NFT Archive",
@@ -36,6 +39,8 @@ export const projectData = [
     description: `Doloremque dolores mollitia architecto aliquid praesentium sunt veritatis labore,
       eos quidem incidunt quos? Error repellendus nemo asperiores.`,
     tags: ["graphic design", "web design", "development"],
+    github: true,
+    behance: true,
   },
   {
     name: "Travel Blog",
@@ -50,6 +55,8 @@ export const projectData = [
     description: `Doloremque dolores mollitia architecto aliquid praesentium sunt veritatis labore,
       eos quidem incidunt quos? Error repellendus nemo asperiores.`,
     tags: ["graphic design", "web design", "development", "wordpress", "cms"],
+    github: true,
+    behance: true,
   },
   {
     name: "Carhartt Clone",
@@ -64,6 +71,9 @@ export const projectData = [
     description: `Doloremque dolores mollitia architecto aliquid praesentium sunt veritatis labore,
       eos quidem incidunt quos? Error repellendus nemo asperiores.`,
     tags: ["development", "e-commerce"],
+    github: true,
+    github_link: "https://github.com/anthonyc-a/carhartt-clone",
+    behance: false,
   },
   {
     name: "Mediasoft Clone",
@@ -78,5 +88,8 @@ export const projectData = [
     description: `Doloremque dolores mollitia architecto aliquid praesentium sunt veritatis labore,
       eos quidem incidunt quos? Error repellendus nemo asperiores.`,
     tags: ["development"],
+    github: true,
+    github_link: "https://github.com/anthonyc-a/mediasoft-clone",
+    behance: false,
   },
 ]
