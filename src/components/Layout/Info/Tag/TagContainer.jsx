@@ -5,7 +5,7 @@ const TagContainer = ({ tags }) => {
   return (
     <div className="tag-contain">
       {tags.map((tag, i) => (
-        <Tag name={tag} />
+        <Tag name={tag} key={i}/>
       ))}
     </div>
   )

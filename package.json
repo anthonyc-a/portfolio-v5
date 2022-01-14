@@ -14,7 +14,6 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "framer-motion": "^5.5.7",
     "gatsby": "^4.4.0",
     "gatsby-cli": "^4.4.0",
     "gatsby-link": "^4.4.0",

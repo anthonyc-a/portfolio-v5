@@ -5,7 +5,6 @@ import Header from "./Header/Header"
 import Info from "./Info/Info"
 import NavArrows from "./NavArrows/NavArrows"
 import Seo from "./SEO/SEO"
-import ThemeSwitch from "./ThemeSwitch/ThemeSwitch"
 
 const Layout = ({
   children,

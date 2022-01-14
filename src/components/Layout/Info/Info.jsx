@@ -41,8 +41,8 @@ const Info = ({ infoActive, setInfoActive, setCursorExpand }) => {
             <br />
             {projectData[count.count].description}
           </p>
-          <TagContainer tags={projectData[count.count].tags} />
           <OutLinks setCursorExpand={setCursorExpand} count={count} />
+          <TagContainer tags={projectData[count.count].tags} />
         </div>
       </div>
     </div>

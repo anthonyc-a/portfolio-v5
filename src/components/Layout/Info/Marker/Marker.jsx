@@ -11,6 +11,7 @@ const Marker = () => {
       markerList.push(
         <div
           className={count.count === i ? "marker-item active" : "marker-item"}
+          key={i}
         ></div>
       )
     }

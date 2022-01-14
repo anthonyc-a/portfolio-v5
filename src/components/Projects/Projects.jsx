@@ -7,14 +7,6 @@ const Projects = ({ setCursorExpand }) => {
   const count = React.useContext(CountStateContext)
   const [selected, setSelected] = React.useState(null)
 
-
-  const toggle = i => {
-    if (selected === i) {
-      return setSelected(null)
-    }
-    setSelected(i)
-  }
-
   return (
     <section className="project-container">
       <div

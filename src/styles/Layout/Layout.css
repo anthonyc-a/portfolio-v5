@@ -742,6 +742,7 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  margin-top: 40px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
