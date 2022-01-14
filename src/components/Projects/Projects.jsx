@@ -20,7 +20,7 @@ const Projects = ({ setCursorExpand }) => {
         {projectData.map((item, i) => (
           <div className="project-item" key={i}>
             <div className="project-header">
-              <h2>
+              <h2 className={count.count === i && "active"}>
                 {item.name} <LinkArrow />
               </h2>
               <span>{item.type}</span>

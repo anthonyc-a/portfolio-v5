@@ -315,13 +315,22 @@ $extra-large: 1600px;
 
     .scrollbar {
       position: fixed;
-      top: 95px;
+      top: 79px;
       width: calc(100% - 80px);
       height: 1px;
+      background-color: var(--line-colour);
+
+      @media screen and (min-width: $medium) {
+        top: 95px;
+      }
+
+      @media screen and (max-height: $small) {
+        top: 79px;
+      }
 
       .scrollbar-inner {
         height: 1px;
-        width: 50px;
+        width: 0;
       }
     }
 
@@ -594,7 +603,7 @@ $extra-large: 1600px;
           }
 
           &.inactive {
-            opacity: .25;
+            opacity: 0.25;
             pointer-events: none;
           }
         }

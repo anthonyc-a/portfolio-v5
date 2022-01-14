@@ -5,13 +5,12 @@ const Scrollbar = ({ refHeight }) => {
 
   const onScroll = () => {
     const winScroll = refHeight.current.scrollTop
-  console.log(winScroll)
+    console.log(winScroll)
 
     const height = refHeight.current.scrollHeight
     const scrolled = (winScroll / height) * 100
     setScrollTop(scrolled)
   }
-
 
   React.useEffect(() => {
     window.addEventListener("scroll", onScroll)

@@ -3,6 +3,7 @@ import Marker from "./Marker/Marker"
 import OpenSite from "./OpenSite/OpenSite"
 import TagContainer from "./Tag/TagContainer"
 import ToggleInfo from "./ToggleInfo/ToggleInfo"
+import Scrollbar from "./Scrollbar/Scrollbar"
 import { projectData } from "../../Projects/ProjectData"
 import { CountStateContext } from "../../context/GlobalCountProvider"
 import OutLinks from "./OutLinks/OutLinks"
@@ -13,6 +14,7 @@ const Info = ({ infoActive, setInfoActive, setCursorExpand }) => {
   return (
     <div className={infoActive ? "info-contain active" : "info-contain"}>
       <div className="info-header">
+        <Scrollbar />
         <Marker />
         <OpenSite setCursorExpand={setCursorExpand} count={count} />
         <ToggleInfo

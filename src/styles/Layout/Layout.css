@@ -414,14 +414,27 @@
 
 .info-contain .info-header .scrollbar {
   position: fixed;
-  top: 95px;
+  top: 79px;
   width: calc(100% - 80px);
   height: 1px;
+  background-color: var(--line-colour);
+}
+
+@media screen and (min-width: 1024px) {
+  .info-contain .info-header .scrollbar {
+    top: 95px;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  .info-contain .info-header .scrollbar {
+    top: 79px;
+  }
 }
 
 .info-contain .info-header .scrollbar .scrollbar-inner {
   height: 1px;
-  width: 50px;
+  width: 0;
 }
 
 .info-contain .info-header .marker {
@@ -796,7 +809,7 @@
 }
 
 .info-contain .info-content .info-description-contain .out-link-contain .out-link-icon.inactive {
-  opacity: .25;
+  opacity: 0.25;
   pointer-events: none;
 }
 /*# sourceMappingURL=Layout.css.map */

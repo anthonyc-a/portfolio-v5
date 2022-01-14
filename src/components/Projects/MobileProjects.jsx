@@ -7,15 +7,6 @@ import LinkArrow from "../Layout/Icons/LinkArrow"
 
 const MobileProjects = () => {
   const count = React.useContext(CountStateContext)
-  const [selected, setSelected] = React.useState(null)
-
-
-  const toggle = i => {
-    if (selected === i) {
-      return setSelected(null)
-    }
-    setSelected(i)
-  }
 
   return (
     <div className="mobile-project-container">
