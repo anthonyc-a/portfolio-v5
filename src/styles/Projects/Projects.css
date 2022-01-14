@@ -256,7 +256,7 @@
 
 .mobile-project-container {
   position: relative;
-  top: 48%;
+  top: 45%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 100%;
