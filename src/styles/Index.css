@@ -991,7 +991,7 @@
 
 .mobile-project-container {
   position: relative;
-  top: 50%;
+  top: 45%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 100%;
@@ -1281,7 +1281,7 @@ a {
 
 h2 {
   margin-bottom: 40px;
-  font-size: 22px;
+  font-size: 2.6vh;
   font-weight: 300;
   text-transform: capitalize;
 }
