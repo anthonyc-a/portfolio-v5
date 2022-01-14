@@ -193,10 +193,6 @@ $extra-large: 1600px;
   padding: 0 16px;
   overflow: hidden;
 
-  @media screen and (max-height: 760px) {
-    top: 50%;
-  }
-
   @media screen and (min-width: 820px) {
     display: none;
   }
