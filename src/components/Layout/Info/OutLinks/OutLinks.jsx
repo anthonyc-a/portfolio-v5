@@ -10,7 +10,11 @@ const OutLinks = ({ setCursorExpand, count }) => {
           href={projectData[count.count].github_link}
           target="_blank"
           rel="noreferrer"
-          className={projectData[count.count].github_link ? "out-link-icon" : "out-link-icon inactive"}
+          className={
+            projectData[count.count].github_link
+              ? "out-link-icon"
+              : "out-link-icon inactive"
+          }
           onMouseEnter={() => {
             setCursorExpand(true)
           }}
@@ -24,7 +28,11 @@ const OutLinks = ({ setCursorExpand, count }) => {
       {projectData[count.count].behance === true && (
         <a
           href="/"
-          className={projectData[count.count].behance_link ? "out-link-icon" : "out-link-icon inactive"}
+          className={
+            projectData[count.count].behance_link
+              ? "out-link-icon"
+              : "out-link-icon inactive"
+          }
           onMouseEnter={() => {
             setCursorExpand(true)
           }}

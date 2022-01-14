@@ -575,7 +575,11 @@ $extra-large: 1600px;
 
       .out-link-contain {
         display: flex;
-        margin-top: 40px;
+        margin-top: 32px;
+
+        @media screen and (min-width: $medium) {
+          margin-top: 40px;
+        }
 
         .out-link-icon {
           display: flex;

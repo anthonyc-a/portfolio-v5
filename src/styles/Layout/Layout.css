@@ -767,7 +767,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 40px;
+  margin-top: 32px;
+}
+
+@media screen and (min-width: 1024px) {
+  .info-contain .info-content .info-description-contain .out-link-contain {
+    margin-top: 40px;
+  }
 }
 
 .info-contain .info-content .info-description-contain .out-link-contain .out-link-icon {

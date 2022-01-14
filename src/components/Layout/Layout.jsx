@@ -20,7 +20,6 @@ const Layout = ({
       <Cursor cursorExpand={cursorExpand} />
       <CursorDot />
       <Header setCursorExpand={setCursorExpand} />
-      <ThemeSwitch setCursorExpand={setCursorExpand} />
       <NavArrows
         setCursorExpand={setCursorExpand}
       />
