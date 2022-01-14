@@ -320,8 +320,8 @@
   opacity: 0.5;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s forwards;
-          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s forwards;
+  -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 3s forwards;
+          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 3s forwards;
 }
 
 @keyframes title-anim {
