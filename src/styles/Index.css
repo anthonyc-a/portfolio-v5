@@ -145,7 +145,7 @@
   content: "";
   position: absolute;
   bottom: calc(50% - 16px);
-  right: 0;
+  left: 0;
   width: 100%;
   height: 1px;
   background-color: var(--font-colour);
@@ -160,8 +160,8 @@
 }
 
 .header .header-content .contact-btn:hover::before {
-  right: unset;
-  left: 0;
+  left: unset;
+  right: 0;
   width: 0;
 }
 
@@ -196,8 +196,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: banner-anim 6s linear infinite;
-          animation: banner-anim 6s linear infinite;
+  animation: banner-anim 6s linear reverse infinite;
 }
 
 .header .header-content .banner .banner-inner:hover {
