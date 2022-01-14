@@ -15,7 +15,7 @@ const Loader = props => {
         </svg>
         anthony animba
         <div className="loader-line"></div>
-        <span>designer & developer</span>
+        <span>web designer</span>
       </div>
     </div>
   )

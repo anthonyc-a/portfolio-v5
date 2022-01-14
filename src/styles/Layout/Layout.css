@@ -509,6 +509,7 @@
 
 .info-contain .info-header .open-site .open-btn svg path {
   stroke: var(--font-colour);
+  stroke-opacity: 0.5;
 }
 
 .info-contain .info-header .open-site .open-btn .open-contain {
@@ -610,11 +611,6 @@
   content: "more info";
 }
 
-.info-contain .info-header .toggle-info svg {
-  -webkit-animation: arrow-anim 1.2s ease-in-out infinite;
-          animation: arrow-anim 1.2s ease-in-out infinite;
-}
-
 .info-contain .info-header .toggle-info svg g path {
   stroke: var(--font-colour);
 }
@@ -651,12 +647,6 @@
 
 .info-contain .info-header .toggle-info:hover svg path {
   stroke-opacity: 1;
-}
-
-@media (pointer: coarse) {
-  .info-contain .info-header .toggle-info:hover svg path {
-    stroke-opacity: unset;
-  }
 }
 
 .info-contain .info-header .toggle-info.active::before {

@@ -391,6 +391,7 @@ $extra-large: 1600px;
           margin-left: 8px;
           path {
             stroke: var(--font-colour);
+            stroke-opacity: 0.5;
           }
         }
 
@@ -457,7 +458,6 @@ $extra-large: 1600px;
       }
 
       svg {
-        animation: arrow-anim 1.2s ease-in-out infinite;
         g {
           path {
             stroke: var(--font-colour);
@@ -481,10 +481,6 @@ $extra-large: 1600px;
         svg {
           path {
             stroke-opacity: 1;
-
-            @media (pointer: coarse) {
-              stroke-opacity: unset;
-            }
           }
         }
       }

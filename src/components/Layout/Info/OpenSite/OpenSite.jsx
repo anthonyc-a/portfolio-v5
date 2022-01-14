@@ -22,7 +22,7 @@ const OpenSite = ({ setCursorExpand, count }) => {
         >
           <div className="open-contain">
             <div className="open-txt">
-              open site
+              launch site
               <LinkArrow />
             </div>
           </div>

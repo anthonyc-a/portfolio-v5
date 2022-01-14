@@ -1,5 +1,6 @@
 .project-container {
   position: relative;
+  display: none;
   top: 40%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -8,8 +9,9 @@
   margin-top: 24px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
   .project-container {
+    display: block;
     top: 50%;
     height: 44vh;
   }
@@ -44,15 +46,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 100%;
-  margin-left: 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .project-container .project-carousel {
-    margin-left: 40px;
-  }
+  margin-left: 40px;
+  -webkit-transition: 0.6s cubic-bezier(0.51, 0.92, 0.24, 1);
+  transition: 0.6s cubic-bezier(0.51, 0.92, 0.24, 1);
 }
 
 .project-container .project-carousel .project-item {
@@ -100,8 +100,9 @@
   width: 15px;
   height: 100%;
   margin-left: 4px;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  opacity: .5;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .project-container .project-carousel .project-item .project-header h2 svg path {
@@ -121,7 +122,7 @@
 
 .project-container .project-carousel .project-item .project-header span {
   font-weight: 300;
-  opacity: .5;
+  opacity: 0.5;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s forwards;
@@ -155,8 +156,8 @@
   margin-top: 20px;
   width: 0;
   height: calc(100% - 74px);
-  -webkit-animation: intro-anim 1s cubic-bezier(0.51, 0.92, 0.24, 1) 2.1s forwards;
-          animation: intro-anim 1s cubic-bezier(0.51, 0.92, 0.24, 1) 2.1s forwards;
+  -webkit-animation: intro-anim 1.2s cubic-bezier(0.51, 0.92, 0.24, 1) 1.9s forwards;
+          animation: intro-anim 1.2s cubic-bezier(0.51, 0.92, 0.24, 1) 1.9s forwards;
   overflow: hidden;
 }
 
@@ -167,19 +168,19 @@
 }
 
 @-webkit-keyframes intro-anim {
-  from {
+  0% {
     width: 0;
   }
-  to {
+  100% {
     width: 100%;
   }
 }
 
 @keyframes intro-anim {
-  from {
+  0% {
     width: 0;
   }
-  to {
+  100% {
     width: 100%;
   }
 }
@@ -221,7 +222,130 @@
   z-index: -1;
 }
 
-.project-container .project-carousel .project-nav {
+.mobile-project-container {
+  position: relative;
+  top: 41%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 16px;
+}
+
+@media screen and (min-width: 640px) {
+  .mobile-project-container {
+    display: none;
+  }
+}
+
+.mobile-project-container .project-carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  -webkit-transition: 0.6s cubic-bezier(0.51, 0.92, 0.24, 1);
+  transition: 0.6s cubic-bezier(0.51, 0.92, 0.24, 1);
+}
+
+.mobile-project-container .project-carousel.active {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.mobile-project-container .project-carousel .project-item {
+  width: calc(100vw - 32px);
+  height: 100%;
+  margin-right: 40px;
+}
+
+.mobile-project-container .project-carousel .project-item .project-header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mobile-project-container .project-carousel .project-item .project-header h2 {
+  position: relative;
+  margin-bottom: unset;
+  font-size: 5.3vw;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s forwards;
+          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s forwards;
+}
+
+.mobile-project-container .project-carousel .project-item .project-header h2 svg {
+  width: 14px;
+  height: 100%;
+  margin-left: 4px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  opacity: 0.5;
+}
+
+.mobile-project-container .project-carousel .project-item .project-header h2 svg path {
+  stroke: var(--font-colour);
+  stroke-width: 0.5px;
+}
+
+.mobile-project-container .project-carousel .project-item .project-header .selected::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--font-colour);
+}
+
+.mobile-project-container .project-carousel .project-item .project-header span {
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 0.5;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s forwards;
+          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s forwards;
+}
+
+@keyframes title-anim {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.mobile-project-container .project-carousel .project-item .project-img-contain {
+  position: relative;
+  margin-top: 36px;
+  width: 100%;
+  height: calc(100% - 48px);
+}
+
+.mobile-project-container .project-carousel .project-item .project-img-contain img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.mobile-project-container .project-nav {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,19 +356,20 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  bottom: -68px;
-  width: calc(100vw - 32px);
+  bottom: -74px;
+  left: 16px;
+  width: calc(100% - 32px);
   height: 52px;
   border-top: 1px solid var(--line-colour);
 }
 
 @media screen and (min-width: 768px) {
-  .project-container .project-carousel .project-nav {
+  .mobile-project-container .project-nav {
     display: none;
   }
 }
 
-.project-container .project-carousel .project-nav .marker {
+.mobile-project-container .project-nav .marker {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,7 +383,7 @@
   height: 18px;
 }
 
-.project-container .project-carousel .project-nav .marker .marker-item {
+.mobile-project-container .project-nav .marker .marker-item {
   width: 1px;
   height: 12px;
   margin-right: 6px;
@@ -268,25 +393,25 @@
   transition: 0.2s ease-in-out;
 }
 
-.project-container .project-carousel .project-nav .marker .marker-item:nth-last-child(1) {
+.mobile-project-container .project-nav .marker .marker-item:nth-last-child(1) {
   margin-right: 0;
 }
 
-.project-container .project-carousel .project-nav .marker .marker-item.active {
+.mobile-project-container .project-nav .marker .marker-item.active {
   height: 18px;
   opacity: 1;
 }
 
-.project-container .project-carousel .project-nav .nav-arrows {
+.mobile-project-container .project-nav .nav-arrows {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   top: 0;
-  right: unset;
+  right: -10px;
 }
 
-.project-container .project-carousel .project-nav .nav-arrows .nav-arrow {
+.mobile-project-container .project-nav .nav-arrows .nav-arrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,22 +428,22 @@
           transform: translateY(4px);
 }
 
-.project-container .project-carousel .project-nav .nav-arrows .nav-arrow svg {
+.mobile-project-container .project-nav .nav-arrows .nav-arrow svg {
   width: 10px;
   height: 18px;
 }
 
-.project-container .project-carousel .project-nav .nav-arrows .nav-arrow svg g path {
+.mobile-project-container .project-nav .nav-arrows .nav-arrow svg g path {
   stroke: var(--font-colour);
 }
 
-.project-container .project-carousel .project-nav .nav-arrows .nav-arrow:nth-child(1) {
+.mobile-project-container .project-nav .nav-arrows .nav-arrow:nth-child(1) {
   margin-right: 32px;
   -webkit-transform: translateY(4px) rotate(-180deg);
           transform: translateY(4px) rotate(-180deg);
 }
 
-.project-container .project-carousel .project-nav .nav-arrows .nav-arrow.inactive {
+.mobile-project-container .project-nav .nav-arrows .nav-arrow.inactive {
   pointer-events: none;
   opacity: 0.5;
 }

@@ -1,22 +1,24 @@
 import React from "react"
+import { CountStateContext } from "../../components/context/GlobalCountProvider"
 import { projectData } from "./ProjectData"
 import LinkArrow from "../Layout/Icons/LinkArrow"
-import NavArrows from "../Layout/NavArrows/NavArrows"
-import Marker from "../Layout/Info/Marker/Marker"
 
 const Projects = ({ setCursorExpand }) => {
+  const count = React.useContext(CountStateContext)
   const [selected, setSelected] = React.useState(null)
-  const projItem = React.useRef()
 
   return (
     <section className="project-container">
-      <div className="project-carousel">
+      <div className="project-carousel" style={{
+          transform: `translate(-${
+            (100 / projectData.length) * count.count
+          }%, 0)`,
+        }}>
         {projectData.map((item, i) => (
-          <div className="project-item" key={i} ref={projItem}>
+          <div className="project-item" key={i}>
             <div className="project-header">
-              <h2 className={item.selected}>
-                {item.name}{" "}
-                <LinkArrow/>
+              <h2>
+                {item.name} <LinkArrow />
               </h2>
               <span>{item.type}</span>
             </div>
@@ -61,10 +63,6 @@ const Projects = ({ setCursorExpand }) => {
             </div>
           </div>
         ))}
-        <div className="project-nav">
-          <Marker />
-          <NavArrows />
-        </div>
       </div>
     </section>
   )
