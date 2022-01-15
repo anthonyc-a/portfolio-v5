@@ -26,10 +26,18 @@ const Info = ({ infoActive, setInfoActive, setCursorExpand }) => {
       <div className="info-content">
         <div className="info-img-contain">
           <img src={projectData[count.count].img} alt="" />
-          {projectData[count.count].img1 && <img src={projectData[count.count].img1} alt="" />}
-          {projectData[count.count].img2 && <img src={projectData[count.count].img2} alt="" />}
-          {projectData[count.count].img3 && <img src={projectData[count.count].img3} alt="" />}
-          {projectData[count.count].img4 && <img src={projectData[count.count].img4} alt="" />}
+          {projectData[count.count].img1 && (
+            <img src={projectData[count.count].img1} alt="" />
+          )}
+          {projectData[count.count].img2 && (
+            <img src={projectData[count.count].img2} alt="" />
+          )}
+          {projectData[count.count].img3 && (
+            <img src={projectData[count.count].img3} alt="" />
+          )}
+          {projectData[count.count].img4 && (
+            <img src={projectData[count.count].img4} alt="" />
+          )}
         </div>
         <div
           className={
@@ -39,12 +47,11 @@ const Info = ({ infoActive, setInfoActive, setCursorExpand }) => {
           }
         >
           <h2>{projectData[count.count].name}</h2>
-          <p>
-            {projectData[count.count].description_intro}
-            <br />
-            <br />
-            {projectData[count.count].description}
-          </p>
+          <p>{projectData[count.count].description_intro}</p>
+          {projectData[count.count].description ? (
+            <p>{projectData[count.count].description}</p>
+          ) : undefined}
+          
           <OutLinks setCursorExpand={setCursorExpand} count={count} />
           <TagContainer tags={projectData[count.count].tags} />
         </div>

@@ -22,11 +22,8 @@ export const projectData = [
     selected: "",
     action: "open site",
     url: "https://archvizual-redesign.netlify.app/",
-    description_intro: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Doloremque dolores mollitia architecto aliquid praesentium sunt veritatis labore, eos quidem incidunt quos?
-    Error repellendus nemo asperiores.`,
-    description: `Doloremque dolores mollitia architecto aliquid praesentium sunt veritatis labore,
-      eos quidem incidunt quos? Error repellendus nemo asperiores.`,
+    description_intro: `A site redesign for the successful architect and 3D artist, Roman Vlasov. After analysing the already existing archvizual.com, I proceeded to create a few concepts in Figma and incrementally improve upon them.`,
+    description: `Finally, I developed the site using Gatsby.js, a Javascript framework for creating fast, static websites and deployed it to Netlify’s cloud hosting service. Overall, the design and development for this project took just under a week.`,
     tags: ["graphic design", "web design", "development"],
     github: true,
     github_link: "https://github.com/anthonyc-a/roman-vlasov-arch",
@@ -73,11 +70,8 @@ export const projectData = [
     selected: "",
     action: "open site",
     url: "https://carhartt-clone-v2.netlify.app/",
-    description_intro: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Doloremque dolores mollitia architecto aliquid praesentium sunt veritatis labore, eos quidem incidunt quos?
-    Error repellendus nemo asperiores.`,
-    description: `Doloremque dolores mollitia architecto aliquid praesentium sunt veritatis labore,
-      eos quidem incidunt quos? Error repellendus nemo asperiores.`,
+    description_intro: `A clone of the ‘New arrivals' page on the Carhartt WIP site. I started this project to sharpen my development skills by demonstrating my ability to successfully reproduce the website of a large international business.`,
+    description: ``,
     tags: ["development", "e-commerce"],
     github: true,
     github_link: "https://github.com/anthonyc-a/carhartt-clone",

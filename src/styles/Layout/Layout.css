@@ -147,6 +147,12 @@
   display: none;
 }
 
+@media screen and (min-width: 480px) {
+  .header .header-content .time {
+    display: block;
+  }
+}
+
 .header .header-content .time span {
   margin-right: 4px;
   opacity: 0.5;
