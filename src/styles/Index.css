@@ -70,7 +70,6 @@
 
 .header .logo .logo-txt {
   position: relative;
-  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -143,6 +142,10 @@
     width: unset;
     margin-left: auto;
   }
+}
+
+.header .header-content .time {
+  display: none;
 }
 
 .header .header-content .time span {
@@ -1094,7 +1097,7 @@
 
 .mobile-project-container {
   position: relative;
-  top: 43%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 100%;
@@ -1396,7 +1399,7 @@ a {
 
 h2 {
   margin-bottom: 40px;
-  font-size: 2.6vh;
+  font-size: 22px;
   font-weight: 300;
   text-transform: capitalize;
 }
