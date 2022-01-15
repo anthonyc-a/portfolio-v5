@@ -31,7 +31,7 @@ $extra-large: 1600px;
     align-items: center;
     color: var(--font-colour);
     opacity: 0;
-    animation: logo-intro-anim 0.4s ease 1.7s forwards;
+    animation: logo-intro-anim 0.4s ease 1.5s forwards;
 
     &:hover {
       .logo-txt {
@@ -332,9 +332,12 @@ $extra-large: 1600px;
       height: 1px;
       background-color: var(--line-colour);
 
+      @media screen and (min-width: $small) {
+        width: calc(100% - 80px);
+      }
+
       @media screen and (min-width: $medium) {
         top: 95px;
-        width: calc(100% - 80px);
       }
 
       @media screen and (max-height: $small) {
@@ -564,6 +567,10 @@ $extra-large: 1600px;
       opacity: 0;
       transition: 0.8s ease;
       transition-delay: 0.125s;
+
+      @media screen and (min-width: $small) {
+        width: 80%;
+      }
 
       @media screen and (min-width: $medium) {
         position: sticky;

@@ -40,8 +40,8 @@
           align-items: center;
   color: var(--font-colour);
   opacity: 0;
-  -webkit-animation: logo-intro-anim 0.4s ease 1.7s forwards;
-          animation: logo-intro-anim 0.4s ease 1.7s forwards;
+  -webkit-animation: logo-intro-anim 0.4s ease 1.5s forwards;
+          animation: logo-intro-anim 0.4s ease 1.5s forwards;
 }
 
 .header .logo:hover .logo-txt {
@@ -444,10 +444,15 @@
   background-color: var(--line-colour);
 }
 
+@media screen and (min-width: 768px) {
+  .info-contain .info-header .scrollbar {
+    width: calc(100% - 80px);
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .info-contain .info-header .scrollbar {
     top: 95px;
-    width: calc(100% - 80px);
   }
 }
 
@@ -763,6 +768,12 @@
           transition-delay: 0.125s;
 }
 
+@media screen and (min-width: 768px) {
+  .info-contain .info-content .info-description-contain {
+    width: 80%;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .info-contain .info-content .info-description-contain {
     position: -webkit-sticky;
@@ -859,7 +870,7 @@
   overflow: hidden;
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 640px) {
   .project-container {
     display: block;
     top: 50%;
@@ -1133,6 +1144,9 @@
   height: fit-content;
   padding: 0 16px;
   overflow: hidden;
+  opacity: 0;
+  -webkit-animation: mobile-intro-anim 1.2s ease 2s forwards;
+          animation: mobile-intro-anim 1.2s ease 2s forwards;
 }
 
 @media screen and (min-height: 840px) {
@@ -1141,13 +1155,13 @@
   }
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 640px) {
   .mobile-project-container {
     display: none;
   }
 }
 
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 640px) {
   .mobile-project-container {
     display: none;
   }
@@ -1255,9 +1269,6 @@
   margin-top: 36px;
   width: 100%;
   height: calc(100% - 48px);
-  opacity: 0;
-  -webkit-animation: mobile-intro-anim 1s cubic-bezier(0.51, 0.92, 0.24, 1) 1.9s forwards;
-          animation: mobile-intro-anim 1s cubic-bezier(0.51, 0.92, 0.24, 1) 1.9s forwards;
 }
 
 @-webkit-keyframes mobile-intro-anim {

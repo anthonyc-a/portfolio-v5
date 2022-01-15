@@ -15,7 +15,7 @@ $extra-large: 1600px;
   margin-top: 24px;
   overflow: hidden;
 
-  @media screen and (min-width: 820px) {
+  @media screen and (min-width: 640px) {
     display: block;
     top: 50%;
     height: 44vh;
@@ -212,16 +212,18 @@ $extra-large: 1600px;
   height: fit-content;
   padding: 0 16px;
   overflow: hidden;
+  opacity: 0;
+  animation: mobile-intro-anim 1.2s ease 2s forwards;
 
   @media screen and (min-height: 840px) {
     padding-bottom: 40px;
   }
 
-  @media screen and (min-width: 820px) {
+  @media screen and (min-width: 640px) {
     display: none;
   }
 
-  @media screen and (min-width: 820px) {
+  @media screen and (min-width: 640px) {
     display: none;
   }
 
@@ -307,9 +309,6 @@ $extra-large: 1600px;
         margin-top: 36px;
         width: 100%;
         height: calc(100% - 48px);
-        opacity: 0;
-        animation: mobile-intro-anim 1s cubic-bezier(0.51, 0.92, 0.24, 1) 1.9s
-          forwards;
 
         @keyframes mobile-intro-anim {
           0% {
