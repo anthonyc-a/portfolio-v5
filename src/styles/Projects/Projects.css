@@ -299,6 +299,12 @@
   overflow: hidden;
 }
 
+@media screen and (min-height: 840px) {
+  .mobile-project-container {
+    padding-bottom: 40px;
+  }
+}
+
 @media screen and (min-width: 820px) {
   .mobile-project-container {
     display: none;
