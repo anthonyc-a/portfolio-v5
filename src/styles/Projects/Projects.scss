@@ -171,6 +171,7 @@ $extra-large: 1600px;
           border-radius: 4px;
           opacity: 0;
           transition: 0.2s ease-in-out;
+          z-index: 100;
 
           &.active {
             opacity: 1;

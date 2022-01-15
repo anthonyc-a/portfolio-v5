@@ -3,11 +3,11 @@ import { useStaticQuery, graphql } from "gatsby"
 export const useProjectImageQuery = () => {
   const data = useStaticQuery(graphql`
     query ProjectImageQuery {
-      allFile {
+      allImageSharp {
         edges {
           node {
-            absolutePath
-            publicURL
+            id
+            gatsbyImageData(layout: CONSTRAINED, width: 200)
           }
         }
       }

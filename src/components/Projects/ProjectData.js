@@ -1,10 +1,10 @@
-import img1 from "../../img/arch.png"
-import img1_1 from "../../img/arch1.png"
-import img1_2 from "../../img/arch2.png"
-import img2 from "../../img/PAK.png"
-import img3 from "../../img/travel_blog.png"
-import img4 from "../../img/carhartt.png"
-import img5 from "../../img/mediasoft.png"
+import img1 from "../../img/arch.webp"
+import img1_1 from "../../img/arch1.webp"
+import img1_2 from "../../img/arch2.webp"
+import img2 from "../../img/PAK.webp"
+import img3 from "../../img/travel_blog.webp"
+import img4 from "../../img/carhartt.webp"
+import img5 from "../../img/mediasoft.webp"
 
 export const projectData = [
   {
