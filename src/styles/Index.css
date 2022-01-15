@@ -12,6 +12,13 @@
   transition: border-color 0.2s ease-in-out;
 }
 
+@media screen and (max-width: 640px) {
+  .header {
+    position: absolute;
+    left: 16px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .header {
     width: calc(100% - 80px);
@@ -1472,6 +1479,12 @@ main {
   max-height: -webkit-fill-available;
   max-height: -moz-available;
   max-height: stretch;
+}
+
+@media screen and (max-width: 640px) {
+  main {
+    height: 100vh;
+  }
 }
 
 @media screen and (min-width: 1024px) {

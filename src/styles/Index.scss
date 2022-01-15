@@ -72,6 +72,10 @@ main {
   height: calc(100vh - 160px);
   max-height: stretch;
 
+  @media screen and (max-width: 640px) {
+    height: 100vh;
+  }
+
   @media screen and (min-width: $medium) {
     height: calc(100vh - 192px);
   }
