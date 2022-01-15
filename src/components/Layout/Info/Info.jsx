@@ -28,6 +28,8 @@ const Info = ({ infoActive, setInfoActive, setCursorExpand }) => {
           <img src={projectData[count.count].img} alt="" />
           {projectData[count.count].img1 && <img src={projectData[count.count].img1} alt="" />}
           {projectData[count.count].img2 && <img src={projectData[count.count].img2} alt="" />}
+          {projectData[count.count].img3 && <img src={projectData[count.count].img3} alt="" />}
+          {projectData[count.count].img4 && <img src={projectData[count.count].img4} alt="" />}
         </div>
         <div
           className={

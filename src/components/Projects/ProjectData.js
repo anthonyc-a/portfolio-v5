@@ -2,9 +2,15 @@ import img1 from "../../img/arch.webp"
 import img1_1 from "../../img/arch1.webp"
 import img1_2 from "../../img/arch2.webp"
 import img2 from "../../img/PAK.webp"
+import img2_1 from "../../img/PAK_1.webp"
 import img3 from "../../img/travel_blog.webp"
 import img4 from "../../img/carhartt.webp"
+import img4_1 from "../../img/carhartt_1.webp"
 import img5 from "../../img/mediasoft.webp"
+import img5_1 from "../../img/mediasoft1.webp"
+import img5_2 from "../../img/mediasoft2.webp"
+import img5_3 from "../../img/mediasoft3.webp"
+import img5_4 from "../../img/mediasoft4.webp"
 
 export const projectData = [
   {
@@ -30,6 +36,7 @@ export const projectData = [
     name: "Pak NFT Archive",
     type: "Design + Code",
     img: img2,
+    img1: img2_1,
     selected: "",
     action: "in development",
     url: "",
@@ -62,6 +69,7 @@ export const projectData = [
     name: "Carhartt Clone",
     type: "Code",
     img: img4,
+    img1: img4_1,
     selected: "",
     action: "open site",
     url: "https://carhartt-clone-v2.netlify.app/",
@@ -79,9 +87,13 @@ export const projectData = [
     name: "Mediasoft Clone",
     type: "Code",
     img: img5,
+    img1: img5_1,
+    img2: img5_2,
+    img3: img5_3,
+    img4: img5_4,
     selected: "",
     action: "open site",
-    url: "/",
+    url: "https://mediasoft-clone-v1.netlify.app/",
     description_intro: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Doloremque dolores mollitia architecto aliquid praesentium sunt veritatis labore, eos quidem incidunt quos?
     Error repellendus nemo asperiores.`,
