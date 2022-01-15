@@ -328,12 +328,13 @@ $extra-large: 1600px;
     .scrollbar {
       position: fixed;
       top: 79px;
-      width: calc(100% - 80px);
+      width: calc(100% - 32px);
       height: 1px;
       background-color: var(--line-colour);
 
       @media screen and (min-width: $medium) {
         top: 95px;
+        width: calc(100% - 80px);
       }
 
       @media screen and (max-height: $small) {

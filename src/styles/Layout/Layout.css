@@ -438,7 +438,7 @@
 .info-contain .info-header .scrollbar {
   position: fixed;
   top: 79px;
-  width: calc(100% - 80px);
+  width: calc(100% - 32px);
   height: 1px;
   background-color: var(--line-colour);
 }
@@ -446,6 +446,7 @@
 @media screen and (min-width: 1024px) {
   .info-contain .info-header .scrollbar {
     top: 95px;
+    width: calc(100% - 80px);
   }
 }
 
