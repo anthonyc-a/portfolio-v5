@@ -30,6 +30,8 @@ $extra-large: 1600px;
     display: flex;
     align-items: center;
     color: var(--font-colour);
+    opacity: 0;
+    animation: logo-intro-anim 0.4s ease 1.7s forwards;
 
     &:hover {
       .logo-txt {
@@ -78,6 +80,16 @@ $extra-large: 1600px;
         }
         &:nth-child(2) {
           transform: rotateX(-90deg) translate3d(0px, 0px, 12px);
+        }
+      }
+
+      @keyframes logo-intro-anim {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
         }
       }
     }

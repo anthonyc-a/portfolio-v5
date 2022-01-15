@@ -38,6 +38,9 @@
       -ms-flex-align: center;
           align-items: center;
   color: var(--font-colour);
+  opacity: 0;
+  -webkit-animation: logo-intro-anim 0.4s ease 1.7s forwards;
+          animation: logo-intro-anim 0.4s ease 1.7s forwards;
 }
 
 .header .logo:hover .logo-txt {
@@ -104,6 +107,24 @@
 .header .logo .logo-txt span:nth-child(2) {
   -webkit-transform: rotateX(-90deg) translate3d(0px, 0px, 12px);
           transform: rotateX(-90deg) translate3d(0px, 0px, 12px);
+}
+
+@-webkit-keyframes logo-intro-anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes logo-intro-anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .header .header-content {
