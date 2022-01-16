@@ -1292,7 +1292,7 @@
 
 .mobile-project-container .project-carousel .project-item .project-img-contain {
   position: relative;
-  margin-top: 36px;
+  margin-top: 32px;
   width: 100%;
   height: calc(100% - 48px);
   opacity: 0;
@@ -1509,7 +1509,7 @@ a {
 }
 
 h2 {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   font-size: 22px;
   font-weight: 300;
   text-transform: capitalize;
@@ -1538,6 +1538,10 @@ p:nth-last-child(1) {
   p {
     line-height: 32px;
   }
+}
+
+img {
+  border-radius: 10px !important;
 }
 
 .loader {
