@@ -22,7 +22,7 @@ export const projectData = [
     selected: "",
     action: "open site",
     url: "https://archvizual-redesign.netlify.app/",
-    description_intro: `A site redesign for the successful architect and 3D artist, Roman Vlasov. After analysing the old site, I proceeded to create a few concepts in Figma and incrementally improve upon them.`,
+    description_intro: `A site redesign for the successful architect and 3D artist, Roman Vlasov. After analysing the current site, I proceeded to create a few concepts in Figma and incrementally improve upon them.`,
     description: `Finally, I developed the site using Gatsby.js, a Javascript framework for creating fast, static websites and deployed it to Netlify’s cloud hosting service. Overall, the design and development for this project took just under a week.`,
     tags: ["graphic design", "web design", "development"],
     github: true,

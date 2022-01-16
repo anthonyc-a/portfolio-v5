@@ -69,15 +69,11 @@ body {
 
 main {
   width: 100%;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 192px);
   max-height: stretch;
 
   @media screen and (max-width: 640px) {
     height: 100vh;
-  }
-
-  @media screen and (min-width: $medium) {
-    height: calc(100vh - 192px);
   }
 }
 
@@ -93,20 +89,23 @@ h2 {
   text-transform: capitalize;
 
   @media screen and (min-width: $medium) {
-    font-size: 24px;
+    font-size: 2.8vh;
   }
 }
 
 p {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 1px;
   line-height: 28px;
   text-transform: none;
 
-  @media screen and (min-width: $medium) {
+  &:nth-last-child(1) {
     margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $medium) {
     line-height: 32px;
   }
 }
@@ -122,7 +121,7 @@ p {
   height: 100vh;
   max-height: stretch;
   background-color: #131313;
-  animation: loader-anim .4s ease 1.5s forwards;
+  animation: loader-anim 0.4s ease 1.5s forwards;
   z-index: 1000000;
 
   .loader-logo {
@@ -153,7 +152,7 @@ p {
     span {
       opacity: 0;
       transform: translateX(-8px);
-      animation: loader-logo-anim .4s ease-out .5s forwards;
+      animation: loader-logo-anim 0.4s ease-out 0.5s forwards;
       z-index: -1;
     }
   }
@@ -179,7 +178,6 @@ p {
     to {
       opacity: 0.5;
       transform: translateX(0);
-
     }
   }
 }

@@ -93,6 +93,8 @@
   font-size: 2.8vh;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
   -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s forwards;
           animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s forwards;
 }
@@ -114,6 +116,13 @@
           animation: arrow-anim 0.4s ease-in-out 3.5s forwards;
 }
 
+@media screen and (max-height: 560px) {
+  .project-container .project-carousel .project-item .project-header h2 svg {
+    width: 2vh;
+    margin-left: 2px;
+  }
+}
+
 .project-container .project-carousel .project-item .project-header h2 svg path {
   stroke: var(--accent-colour);
   stroke-width: 0.6px;
@@ -133,11 +142,18 @@
 
 .project-container .project-carousel .project-item .project-header span {
   font-weight: 300;
+  white-space: nowrap;
   opacity: 0.5;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 3s forwards;
           animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 3s forwards;
+}
+
+@media screen and (max-height: 560px) {
+  .project-container .project-carousel .project-item .project-header span {
+    font-size: 2vh;
+  }
 }
 
 @-webkit-keyframes title-anim {

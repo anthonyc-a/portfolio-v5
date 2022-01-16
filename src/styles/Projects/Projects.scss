@@ -66,6 +66,7 @@ $extra-large: 1600px;
           margin-bottom: unset;
           font-size: 2.8vh;
           transform: translateY(100%);
+          transition: .4s ease;
           animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s
             forwards;
 
@@ -85,6 +86,11 @@ $extra-large: 1600px;
             opacity: 0;
             transform: translate(-4px, 4px);
             animation: arrow-anim 0.4s ease-in-out 3.5s forwards;
+
+            @media screen and (max-height: 560px) {
+              width: 2vh;
+              margin-left: 2px;
+            }
 
             path {
               stroke: var(--accent-colour);
@@ -106,10 +112,15 @@ $extra-large: 1600px;
         }
         span {
           font-weight: 300;
+          white-space: nowrap;
           opacity: 0.5;
           transform: translateY(100%);
           animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 3s
             forwards;
+
+            @media screen and (max-height: 560px) {
+              font-size: 2vh;
+            }
         }
 
         @keyframes title-anim {

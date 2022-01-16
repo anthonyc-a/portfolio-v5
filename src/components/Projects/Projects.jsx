@@ -12,9 +12,10 @@ const Projects = ({ setCursorExpand }) => {
       <div
         className="project-carousel"
         style={{
-          transform: `translate(-${
-            (100 / projectData.length) * count.count
-          }%, 0)`,
+          transform:
+            count.count < projectData.length - 2
+              ? `translate(-${(100 / projectData.length) * count.count}%, 0)`
+              : `translate(-${(100 / projectData.length) * (projectData.length - 2)}%, 0)`,
         }}
       >
         {projectData.map((item, i) => (

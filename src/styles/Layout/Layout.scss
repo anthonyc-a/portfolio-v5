@@ -241,7 +241,7 @@ $extra-large: 1600px;
   top: 112px;
   right: 20px;
 
-  @media screen and (min-width: $small) {
+  @media screen and (min-width: 640px) {
     display: flex;
   }
 
