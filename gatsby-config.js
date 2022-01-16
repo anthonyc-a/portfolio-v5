@@ -19,10 +19,11 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `anthony-animba-portfolio`,
-        short_name: `starter`,
+        short_name: `Anthony Animba Portfolio`,
+        description: `Freelance web designer and developer based in London`,
         start_url: `/`,
         background_color: `#131313`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `static/logo512.png`,
       },
     },
