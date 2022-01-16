@@ -585,6 +585,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0;
   -webkit-animation: project-switch-anim 0.4s cubic-bezier(0.51, 0.92, 0.24, 1) forwards;
           animation: project-switch-anim 0.4s cubic-bezier(0.51, 0.92, 0.24, 1) forwards;
 }
@@ -598,6 +599,7 @@
   content: "in development";
   position: relative;
   display: block;
+  opacity: 0;
   -webkit-animation: project-switch-anim-1 0.4s cubic-bezier(0.51, 0.92, 0.24, 1) forwards;
           animation: project-switch-anim-1 0.4s cubic-bezier(0.51, 0.92, 0.24, 1) forwards;
 }

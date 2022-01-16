@@ -440,6 +440,7 @@ $extra-large: 1600px;
           .open-txt {
             display: flex;
             align-items: center;
+            opacity: 0;
             animation: project-switch-anim 0.4s
               cubic-bezier(0.51, 0.92, 0.24, 1) forwards;
           }
@@ -454,6 +455,7 @@ $extra-large: 1600px;
           content: "in development";
           position: relative;
           display: block;
+          opacity: 0;
           animation: project-switch-anim-1 0.4s
             cubic-bezier(0.51, 0.92, 0.24, 1) forwards;
         }
