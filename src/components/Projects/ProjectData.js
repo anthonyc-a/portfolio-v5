@@ -37,7 +37,7 @@ export const projectData = [
     selected: "",
     action: "in development",
     url: "",
-    description_intro: `I’m currently designing a web based archive for Murat Pak, also known as Pak. Its purpose is to archive the NFTs he’s been creating so they can be viewed in an environment that suits the standards of his work.`,
+    description_intro: `I’m currently designing a web based archive for Murat Pak, also known as Pak. Its purpose is to catalogue the NFTs he’s created so they can be viewed in an environment that suits the standards of his work.`,
     description: `I started this project through my admiration for Pak as an artist and will begin to develop these designs in the near future.`,
     tags: ["graphic design", "web design", "development"],
     github: true,
