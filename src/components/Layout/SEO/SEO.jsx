@@ -10,7 +10,7 @@ const Seo = () => {
     <Helmet>
       <html lang="en" className={themeClass} />
       <title>
-        Anthony Animba | Freelance Web Designer & Developer in London
+        Anthony Animba | Freelance Web Designer and Developer in London
       </title>
       <meta
         name="viewport"
