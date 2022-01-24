@@ -802,6 +802,7 @@
 @media screen and (min-width: 1600px) {
   .info-contain .info-content .info-description-contain {
     top: 120px;
+    width: 40%;
   }
 }
 

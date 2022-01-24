@@ -46,12 +46,15 @@ const Info = ({ infoActive, setInfoActive, setCursorExpand }) => {
               : "info-description-contain"
           }
         >
-          <h2>{projectData[count.count].name}</h2>
-          <p>{projectData[count.count].description_intro}</p>
-          {projectData[count.count].description ? (
-            <p>{projectData[count.count].description}</p>
-          ) : undefined}
-          
+          <div className="info-description-header">
+            <h2>{projectData[count.count].name}</h2>
+          </div>
+          <div className="info-description-content">
+            <p>{projectData[count.count].description_intro}</p>
+            {projectData[count.count].description ? (
+              <p>{projectData[count.count].description}</p>
+            ) : undefined}
+          </div>
           <OutLinks setCursorExpand={setCursorExpand} count={count} />
           <TagContainer tags={projectData[count.count].tags} />
         </div>

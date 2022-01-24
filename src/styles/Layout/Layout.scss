@@ -594,6 +594,7 @@ $extra-large: 1600px;
 
       @media screen and (min-width: $extra-large) {
         top: 120px;
+        width: 40%;
       }
 
       &.active {
