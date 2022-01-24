@@ -811,6 +811,10 @@
   opacity: 1;
 }
 
+.info-contain .info-content .info-description-contain .info-description-content p {
+  font-size: 14px !important;
+}
+
 .info-contain .info-content .info-description-contain .tag-contain {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1526,7 +1530,7 @@ h2 {
 
 p {
   margin-bottom: 24px;
-  font-size: 14px !important;
+  font-size: 14px;
   font-weight: 300;
   letter-spacing: 1px;
   line-height: 28px;

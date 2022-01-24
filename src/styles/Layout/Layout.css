@@ -810,6 +810,10 @@
   opacity: 1;
 }
 
+.info-contain .info-content .info-description-contain .info-description-content p {
+  font-size: 14px !important;
+}
+
 .info-contain .info-content .info-description-contain .tag-contain {
   display: -webkit-box;
   display: -ms-flexbox;

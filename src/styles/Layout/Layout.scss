@@ -601,6 +601,12 @@ $extra-large: 1600px;
         opacity: 1;
       }
 
+      .info-description-content {
+        p {
+          font-size: 14px !important;
+        }
+      }
+
       .tag-contain {
         display: flex;
         width: 100%;
