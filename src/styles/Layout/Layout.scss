@@ -42,6 +42,12 @@ $extra-large: 1600px;
       .logo-txt {
         transform: rotateX(90deg);
       }
+
+      @media (pointer: coarse) {
+        .logo-txt {
+          transform: rotateX(0deg);
+        }
+      }
     }
 
     svg {
@@ -79,6 +85,7 @@ $extra-large: 1600px;
       span {
         position: absolute;
         white-space: nowrap;
+
         &:nth-child(1) {
           transform: rotateX(0deg) translate3d(0px, 0px, 12px);
         }
