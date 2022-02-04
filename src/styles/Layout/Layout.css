@@ -45,9 +45,6 @@
       -ms-flex-align: center;
           align-items: center;
   color: var(--font-colour);
-  opacity: 0;
-  -webkit-animation: logo-intro-anim 0.4s ease 1.5s forwards;
-          animation: logo-intro-anim 0.4s ease 1.5s forwards;
 }
 
 .header .logo:hover .logo-txt {
@@ -532,8 +529,6 @@
   display: none;
   margin: 0 40px;
   pointer-events: none;
-  -webkit-animation: project-switch-anim 0.4s cubic-bezier(0.51, 0.92, 0.24, 1) forwards;
-          animation: project-switch-anim 0.4s cubic-bezier(0.51, 0.92, 0.24, 1) forwards;
 }
 
 @media screen and (min-width: 768px) {
@@ -585,8 +580,8 @@
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
-  -webkit-animation: project-switch-anim 0.4s cubic-bezier(0.51, 0.92, 0.24, 1) forwards;
-          animation: project-switch-anim 0.4s cubic-bezier(0.51, 0.92, 0.24, 1) forwards;
+  -webkit-animation: project-switch-anim 0.5s cubic-bezier(0.51, 0.92, 0.24, 1) forwards;
+          animation: project-switch-anim 0.5s cubic-bezier(0.51, 0.92, 0.24, 1) forwards;
 }
 
 .info-contain .info-header .open-site .dev-btn {

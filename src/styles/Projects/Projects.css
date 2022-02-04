@@ -90,13 +90,13 @@
 .project-container .project-carousel .project-item .project-header h2 {
   position: relative;
   margin-bottom: unset;
-  font-size: 2.8vh;
+  font-size: 3vh;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
   -webkit-transition: .4s ease;
   transition: .4s ease;
-  -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s forwards;
-          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s forwards;
+  -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 1.3s forwards;
+          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 1.3s forwards;
 }
 
 .project-container .project-carousel .project-item .project-header h2.active svg path {
@@ -104,7 +104,7 @@
 }
 
 .project-container .project-carousel .project-item .project-header h2 svg {
-  width: 15px;
+  width: 17px;
   height: 100%;
   margin-left: 4px;
   -webkit-transition: 0.2s ease-in-out;
@@ -112,8 +112,8 @@
   opacity: 0;
   -webkit-transform: translate(-4px, 4px);
           transform: translate(-4px, 4px);
-  -webkit-animation: arrow-anim 0.4s ease-in-out 3.5s forwards;
-          animation: arrow-anim 0.4s ease-in-out 3.5s forwards;
+  -webkit-animation: arrow-anim 0.4s ease-in-out 2.1s forwards;
+          animation: arrow-anim 0.4s ease-in-out 2.1s forwards;
 }
 
 @media screen and (max-height: 560px) {
@@ -146,8 +146,8 @@
   opacity: 0.5;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 3s forwards;
-          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 3s forwards;
+  -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 1.6s forwards;
+          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 1.6s forwards;
 }
 
 @media screen and (max-height: 560px) {
@@ -235,8 +235,8 @@
   margin-top: 20px;
   width: 0;
   height: calc(100% - 74px);
-  -webkit-animation: intro-anim 1s cubic-bezier(0.51, 0.92, 0.24, 1) 1.9s forwards;
-          animation: intro-anim 1s cubic-bezier(0.51, 0.92, 0.24, 1) 1.9s forwards;
+  -webkit-animation: intro-anim 1s cubic-bezier(0.51, 0.92, 0.24, 1) 0.5s forwards;
+          animation: intro-anim 1s cubic-bezier(0.51, 0.92, 0.24, 1) 0.5s forwards;
   overflow: hidden;
 }
 
@@ -377,8 +377,8 @@
   font-size: 21px;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s forwards;
-          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 2.7s forwards;
+  -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 1.3s forwards;
+          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 1.3s forwards;
 }
 
 .mobile-project-container .project-carousel .project-item .project-header h2 svg {
@@ -390,8 +390,8 @@
   opacity: 0;
   -webkit-transform: translate(-4px, 4px);
           transform: translate(-4px, 4px);
-  -webkit-animation: arrow-anim-1 0.4s ease-in-out 3.5s forwards;
-          animation: arrow-anim-1 0.4s ease-in-out 3.5s forwards;
+  -webkit-animation: arrow-anim-1 0.4s ease-in-out 2.1s forwards;
+          animation: arrow-anim-1 0.4s ease-in-out 2.1s forwards;
 }
 
 .mobile-project-container .project-carousel .project-item .project-header h2 svg path {
@@ -415,8 +415,8 @@
   opacity: 0.5;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 3s forwards;
-          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 3s forwards;
+  -webkit-animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 1.6s forwards;
+          animation: title-anim 0.8s cubic-bezier(0.51, 0.92, 0.24, 1) 1.6s forwards;
 }
 
 @keyframes title-anim {
@@ -438,8 +438,8 @@
   opacity: 0;
   -webkit-transform: translateY(4px);
           transform: translateY(4px);
-  -webkit-animation: mobile-intro-anim 1.2s ease 1.8s forwards;
-          animation: mobile-intro-anim 1.2s ease 1.8s forwards;
+  -webkit-animation: mobile-intro-anim 1.2s ease .4s forwards;
+          animation: mobile-intro-anim 1.2s ease .4s forwards;
 }
 
 @-webkit-keyframes mobile-intro-anim {

@@ -1,5 +1,6 @@
 @import url("https://use.typekit.net/rrc7gjs.css");
 @import "./Layout/Layout.scss";
+@import "./Home/Home.scss";
 @import "./Projects/Projects.scss";
 
 $smaller: 480px;
@@ -72,7 +73,7 @@ main {
   height: calc(100vh - 192px);
   max-height: stretch;
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 768px) {
     height: 100vh;
   }
 }
@@ -82,6 +83,31 @@ a {
   text-decoration: unset;
 }
 
+h1 {
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+
+  @media screen and (min-width: $smaller) {
+    font-size: 44px;
+  }
+
+  @media screen and (min-width: $small) {
+    font-size: 52px;
+    line-height: 72px;
+    letter-spacing: 3px;
+  }
+
+  @media screen and (min-width: $medium) {
+    font-size: 54px;
+  }
+
+  @media screen and (max-height: 640px) {
+    font-size: 32px;
+  }
+}
+
 h2 {
   margin-bottom: 32px;
   font-size: 22px;
@@ -89,7 +115,7 @@ h2 {
   text-transform: capitalize;
 
   @media screen and (min-width: $medium) {
-    font-size: 2.8vh;
+    font-size: 3.4vh;
   }
 }
 
@@ -108,10 +134,14 @@ p {
   @media screen and (min-width: $medium) {
     line-height: 32px;
   }
+
+  @media screen and (max-height: 640px) {
+    font-size: 13px;
+  }
 }
 
 img {
-    border-radius: 8px !important;
+  border-radius: 8px !important;
 }
 
 .loader {
@@ -239,5 +269,50 @@ img {
 
   @media (pointer: coarse) {
     display: none;
+  }
+}
+
+.social-icons {
+  display: flex;
+
+  @media screen and (min-width: $smaller) {
+    margin-top: 48px;
+  }
+
+  @media screen and (min-width: $small) {
+    margin-top: 64px;
+    margin-bottom: 88px;
+  }
+
+  @media screen and (min-width: $medium) {
+    margin-top: 72px;
+  }
+
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    border-radius: 100%;
+    border: 1px solid var(--line-colour);
+    transition: .4s ease-in-out;
+
+    @media screen and (min-width: $small) {
+      width: 44px;
+      height: 44px;
+      margin-right: 20px;
+    }
+
+    &:hover {
+      border-color: var(--font-colour);
+    }
+
+    img {
+      width: 15px;
+      height: 15px;
+      border-radius: 0 !important;
+    }
   }
 }

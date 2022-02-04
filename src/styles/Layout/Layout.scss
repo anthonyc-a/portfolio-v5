@@ -35,8 +35,8 @@ $extra-large: 1600px;
     display: flex;
     align-items: center;
     color: var(--font-colour);
-    opacity: 0;
-    animation: logo-intro-anim 0.4s ease 1.5s forwards;
+    // opacity: 0;
+    // animation: logo-intro-anim 0.4s ease 1.5s forwards;
 
     &:hover {
       .logo-txt {
@@ -399,8 +399,6 @@ $extra-large: 1600px;
         display: none;
         margin: 0 40px;
         pointer-events: none;
-        animation: project-switch-anim 0.4s cubic-bezier(0.51, 0.92, 0.24, 1)
-          forwards;
 
         @media screen and (min-width: $small) {
           display: block;
@@ -441,7 +439,7 @@ $extra-large: 1600px;
             display: flex;
             align-items: center;
             opacity: 0;
-            animation: project-switch-anim 0.4s
+            animation: project-switch-anim 0.5s
               cubic-bezier(0.51, 0.92, 0.24, 1) forwards;
           }
         }

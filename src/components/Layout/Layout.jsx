@@ -2,14 +2,10 @@ import React from "react"
 import Cursor from "./Cursor/Cursor"
 import CursorDot from "./Cursor/CursorDot"
 import Header from "./Header/Header"
-import Info from "./Info/Info"
-import NavArrows from "./NavArrows/NavArrows"
 import Seo from "./SEO/SEO"
 
 const Layout = ({
   children,
-  infoActive,
-  setInfoActive,
   cursorExpand,
   setCursorExpand,
 }) => {
@@ -19,15 +15,7 @@ const Layout = ({
       <Cursor cursorExpand={cursorExpand} />
       <CursorDot />
       <Header setCursorExpand={setCursorExpand} />
-      <NavArrows
-        setCursorExpand={setCursorExpand}
-      />
       <main>{children}</main>
-      <Info
-        infoActive={infoActive}
-        setInfoActive={setInfoActive}
-        setCursorExpand={setCursorExpand}
-      />
     </>
   )
 }
