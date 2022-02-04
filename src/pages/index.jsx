@@ -1,6 +1,7 @@
 import React from "react"
 import "../styles/Index.css"
 import Link from "gatsby-link"
+import Loader from "../components/Loader/Loader"
 import Layout from "../components/Layout/Layout"
 import LinkArrow from "../components/Layout/Icons/LinkArrow"
 import SocialIcons from "../components/Layout/Icons/Social/SocialIcons"
