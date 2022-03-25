@@ -56,6 +56,13 @@
           transform: rotateX(90deg);
 }
 
+@media (pointer: coarse) {
+  .header .logo:hover .logo-txt {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
 .header .logo svg {
   height: 11px;
   margin-right: 10px;
